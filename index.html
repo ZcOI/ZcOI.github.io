@@ -8,7 +8,37 @@
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="shortcut icon" href="./logonew.png">
     <style>
-        /* body{height: ;} */
+        *{
+            background-repeat: no-repeat;
+        }
+        /* ------- */
+        input { 
+            width: 40px;
+            height: 20px; 
+        } 
+        #remainTime{ 
+            padding: 20px 10px ;
+            border: gray 2px solid;
+            border-radius: 10px;
+            position: relative;
+            top: 100px;
+            right: 40px;
+            float: left;
+            background-color:whitesmoke;
+            margin-top: 30px; 
+            font-size: 20px; 
+            text-align: center; 
+        } 
+        #remainTime span { 
+            color:blueviolet; 
+            font-weight: bold; 
+            margin-right: 10px; 
+        } 
+        /* ------- */
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
         html,body,main{
             font-family: 'Consolas';
             height: 100%;
@@ -20,38 +50,33 @@
             height: 30px;
             background-color: #99d9ea;
         }
-        .head1 li{
-            
-            /* overflow:visible; */
-            /* border-style: solid; */
+        header div{
+            position:relative;
+            z-index: 999;
+            float: left;
+        }
+        ul{
             list-style: none;
             height: 30px;
-            width:  auto;
+            width:  150px;
             background-color:#c8bfe7;
             float:left;
-            margin: 0px auto;
-            margin-left: 0px;
             line-height:30px;
         }
-        .part1{
+        .part1 a{
+            
             font-family: 'Consolas';
             display: none;
-            position: absolute;
-            left: -0px;
-            /* background-color: #f9f9f9; */
-            min-width: 100%;
+            min-width: 0px ;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             padding: 100px 0px;
-            border-radius: 0 0 10% 10%;
-            z-index: 1;
-            /* margin: 0px; */
-            /* width: 100%; */
+            margin: 0px;
+            
             background-color:rgba(100, 149, 237,0.9);
         }
+        .part1{display: none;z-index: 999;}
         .head1 a{
-            position: relative;
             text-decoration: none;
-            width:auto;
             padding: 0% 100px 0px 20px;
             color: dimgrey;
             display: block;
@@ -59,6 +84,8 @@
             clear: both;
         }
         .head1 a:hover{
+            clear: both;
+            display: block;
             background-color:#99b9ea;
             color:blueviolet;
         }
@@ -66,29 +93,24 @@
             background-color:blue;
             color:paleturquoise;
         }
+        .head1:hover .part1 {
+            display: block;
+            clear: both;
+        }
         img{
             float: left;
         }
-        a:hover .part1 {
-            display: block;
-        }
         .leftb{
             float: left;
-            position: relative;
-            /* top: -17px; */
             width: 72.83px;
             height:100%;
             background-color: #99d9ea;
         }
         .l1{
             position:relative;
-            border-radius: 20%;
+            border-radius: 10px;
             box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
-            /* top: 17px; */
-            /* top: 17px;
-            left: 17px; */
             margin: 10%;
-            /* width: ; */
             background-color:rgba(105, 90, 205, 0.534);
             padding:29%;
             color: aliceblue;
@@ -103,65 +125,137 @@
             box-shadow: 1px 1px 3px rgba(0,0,0,0.8);
         }
         .lia{
-            /* height: 80px;
-            width: 80px; */
             padding: 0px;
             text-decoration: none;
             display: block;
             color:rgb(3, 43, 5);
-            /* background-color: #fff; */
         }
         .mpic{
             left: 2%;
             top: 2%;
             position: relative;
             overflow:hidden;
-            /* border-style:; */
             border: black 2px solid;
             border-style:inset;
             float: left;
             height:324px;
             width:576px;
-            border-radius: 5%;
-            /* background-image: url(./h.png) ;
-            background-size: 100%; */
+            border-radius: 10px;
+            background-color: #fff;
             color: aquamarine;
             font-size: 30px;
             font-family:'Consolas';
+        }
+        .mpicimg{
+            position: relative;
+            top: 12px;
+            left: 20px;
         }
         .mpicimg:hover{
             float: left;
             transform: scale(2.0, 2.0);
             transition: all .5s ease-in 0s;
         }
-        /* .headimg:active{
-            overflow: hidden;
-            transform: scale(1.5, 1.5);
-            transition: all .5s ease-in 0s;
-        } */
+        footer{
+            background-color: #000;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+            height: 20%;
+        }
     </style>
 </head>
+<script>
+    (function show() { 
+        //1.设置目的时间 
+        var oYear = 2022 
+        var oMonth = 9
+        var oDay = 18
+        var oHour = 8 
+        var oMinute = 0 
+        var oSecond = 0 
+        var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond); 
+        // console.log(dateFormat(funtureDate)) 
+        //2.设置定时器 
+        setInterval(function () { 
+            //3.获取现在的时间 
+            var presentDate = new Date();
+            //4.获取时间戳 
+            var funtureTime = funtureDate.getTime(); 
+            var presenTime = presentDate.getTime(); 
+            //5.获取剩余的时间戳 
+            var allTime = funtureTime - presenTime; 
+            //6.把毫秒转换为秒
+            var allSecond = parseInt(allTime / 1000); 
+            //7.获取剩余多少天 
+            var day = size(parseInt(allSecond / 3600 / 24)); 
+            //8.获取剩余多少小时 
+            var hour = size(parseInt(allSecond / 3600 % 24)); 
+            //9.获取剩余多少分钟 
+            var minute = size(parseInt(allSecond / 60 % 60)); 
+            //10.获取剩余多少秒 
+            var second = size(parseInt(allSecond % 60)); 
+            //11.注入： 
+            document.getElementById('one').innerHTML = day; 
+            document.getElementById('two').innerHTML = hour; 
+            document.getElementById('three').innerHTML = minute; 
+            document.getElementById('four').innerHTML = second; 
+        }, 1000); 
+        //如果数>=10,则在前面补0 
+        function size(num) { 
+            return num < 10 & num >= 0 ? '0' + num : num; 
+        } 
+    })() 
+        //格式化日期格式 2 
+        function dateFormat(data){ 
+        var date = new Date(data); 
+        var YY = date.getFullYear() + '-'; 
+        var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-'; 
+        var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()); return YY + MM + DD; 
+    } 
+</script> 
 <body>
+    
     <header>
-        
         <a href="javascript:;"><img src="./h1.png" height="30px" class="headimg"></a>
-        <ul class="head1">
-            <li>
-                <a href="javascript:;">
-                    Home
-                    <div class="part1"></div></a>
-                
-            </li>
-            <li>
-                <a href="javascript:;">Online-Judge<div class="part1"></div></a>
-            </li>
-            <li>
-                <a href="javascript:;">Offline-Judge<div class="part1"></div></a>
-            </li>
-            <li>
-                <a href="javascript:;">About-us<div class="part1"></div></a>
-            </li>
-        </ul>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="javascript:;" class="head1nm">Home</a>
+                    <ul class="part1">
+                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="javascript:;" class="head1nm">Softwares</a>
+                    <ul class="part1">
+                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="javascript:;" class="head1nm">Documents</a>
+                    <ul class="part1">
+                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
     </header>
     
     <main>
@@ -179,11 +273,21 @@
                 <a href="javascript:;" class="lia" >123</a>
             </div>
         </div>
-        <div class="mpic">
-            <img src="./h.png" height="324px" class="mpicimg">
-            <!-- <div class="mpictext">q</div> -->
-        </div>
+        <div class="mpic"><img src="./h.png" height="324px" class="mpicimg" ></div>
+        
+        <!-- -------------------------------------------------------------------------------- -->
+        <div id="remainTime"> 距CSP-J/S还有：<br>
+            <span id="one"></span>天 
+            <span id="two"></span>时 
+            <span id="three"></span>分 
+            <span id="four"></span>秒 
+        </div>  
+        <!-- -------------------------------------------------------------------------------- -->
+        
     </main>
-    <FOOTER></FOOTER>
+    
+    <footer>
+
+    </footer>
 </body>
 </html>
