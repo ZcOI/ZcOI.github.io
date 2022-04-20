@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,#move{
+            position: relative;
+            left:30%;
+        }
+        table{
+            
+            
+            /* table-layout: inherit; */
+            width:40%;
+            border: black 1px solid; 
+            /* margin: 0px;
+            padding: 0px; */
+            border-spacing: 0px;
+        }
+        td{
+            border: black 1px solid;
+        }
+        tr:nth-child(2n){
+            background-color:aqua;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var a = document.getElementsByTagName("button");
+            // var tbody=document.getElementsByTagName("table");
+            for(var i = 0 ; i < a.length ; i++){
+                a[i].onclick = function(){
+                    var tr = this.parentNode.parentNode;
+                    var nam=tr.getElementsByTagName("td")[0].innerHTML;                  // alert("really???");
+                    // prompt();
+                    var con=confirm("Really?Delete "+nam+" ?");
+                    if(con)tr.parentNode.removeChild(tr);
+                    
+                }
+            }
+            //
+            var sub=document.getElementById("subbutton");
+            sub.onclick=function(){
+                var name=document.getElementById("inname").value;
+                var salary=document.getElementById("insalary").value;
+                var age=document.getElementById("inage").value;
+                var button=document.createElement("button");
+                var tr=document.createElement("tr");
+                var nametd=document.createElement("td");
+                var salarytd=document.createElement("td");
+                var agetd=document.createElement("td");
+                var buttontd=document.createElement("td");
+                var nametext=document.createTextNode(name);
+                var salarytext=document.createTextNode(salary);
+                var agetext=document.createTextNode(age);
+                var buttext=document.createTextNode("Delete");
+                nametd.appendChild(nametext);
+                salarytd.appendChild(salarytext);
+                agetd.appendChild(agetext);
+                button.appendChild(buttext);
+                button.id = "delbutton";
+                button.onclick = function(){
+                    var tr = this.parentNode.parentNode;
+                    var nam=tr.getElementsByTagName("td")[0].innerHTML;                  // alert("really???");
+                    // prompt();
+                    var con=confirm("Really?Delete "+nam+" ?");
+                    if(con)tr.parentNode.removeChild(tr);
+                    
+                }
+                buttontd.appendChild(button);
+                tr.appendChild(nametd);
+                tr.appendChild(salarytd);
+                tr.appendChild(agetd);
+                tr.appendChild(buttontd);
+                var tab=document.getElementById("bg");
+                var tar=tab.getElementsByTagName("tbody");
+                tab.appendChild(tr);
+            }
+        };
+    </script>
+</head>
+<body>
+    <table id="bg">
+        <tbody>
+        <tr>
+            <td>name</td>
+            <td>salsry</td>
+            <td>age</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>name1</td>
+            <td>salsry</td>
+            <td>age</td>
+            <td ><button id="delbutton">Delete</button> </td>
+        </tr>
+        <tr>
+            <td>name2</td>
+            <td>salsry</td>
+            <td>age</td>
+            <td ><button id="delbutton">Delete</button> </td>
+        </tr>
+        <tr>
+            <td>name3</td>
+            <td>salsry</td>
+            <td>age</td>
+            <td ><button id="delbutton">Delete</button> </td>
+        </tr>
+        <tr>
+            <td>name4</td>
+            <td>salsry</td>
+            <td>age</td>
+            <td ><button id="delbutton">Delete</button> </td>
+        </tr>
+        </tbody>tbodt>
+    </table>
+    <div id="move">
+            <h4>Add New</h4>
+            name:<input type="text" name="name" id="inname"><br>
+            salary:<input type="text" name="salary" id="insalary"> <br>
+            age:<input type="text" name="age" id="inage"><br>
+            <button id="subbutton">Submit</button>
+    </div>
+</body>
+</html> 

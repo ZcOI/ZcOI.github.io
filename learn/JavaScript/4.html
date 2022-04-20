@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box21{
+            position: absolute;
+            /* padding: 100px; */
+            /* margin: 100px; */
+            width: 300px;
+            height: 300px;
+            /* top:-150px;
+            left: -150px; */
+            background-color:aquamarine;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+        //     var but=document.getElementById("b1");
+        //     var box1=document.getElementById("box21");
+        //     but.onclick=function(){
+        //         box1.style.width="100px";
+        //         box1.style.height="100px";
+        //         box21.style.backgroundColor="yellow";
+        //     }
+            var box1=document.getElementById("box21");
+            box1.onmousedown=function(event){
+                event=event||window.event;
+                var xx=event.clientX-box1.offsetLeft;
+                var yy=event.clientY-box1.offsetTop;
+                box1.onmousemove=function(event){
+                    event=event||window.event;
+                    var left=event.clientX;
+                    var top=event.clientY;
+                    box1.style.left=left-xx+"px";
+                    box1.style.top=top-yy+"px";
+                }
+                box1.onmouseup=function(){
+                    box1.onmousemove=null;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box21"></div>
+</body>
+</html>

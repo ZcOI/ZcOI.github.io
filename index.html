@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZcOI-2022</title>
     <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="shortcut icon" href="./logonew.png">
+    <link rel="shortcut icon" href="./Mediasource/logonew.png">
     <style>
         *{
             background-repeat: no-repeat;
+            /* overflow-x: hidden; */
         }
         /* ------- */
-        input { 
-            width: 40px;
-            height: 20px; 
-        } 
+        input { width: 40px;height: 20px; } 
         #remainTime{ 
             padding: 20px 10px ;
             border: gray 2px solid;
@@ -30,15 +28,13 @@
             text-align: center; 
         } 
         #remainTime span { 
+            /* position: absolute; */
             color:blueviolet; 
             font-weight: bold; 
             margin-right: 10px; 
         } 
         /* ------- */
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
+        *{margin: 0px;padding: 0px;}
         html,body,main{
             font-family: 'Consolas';
             height: 100%;
@@ -58,9 +54,9 @@
         ul{
             list-style: none;
             height: 30px;
-            width:  150px;
+            width:  165px;
             background-color:#c8bfe7;
-            float:left;
+            /* float:inline-start; */
             line-height:30px;
         }
         .part1 a{
@@ -75,9 +71,10 @@
             background-color:rgba(100, 149, 237,0.9);
         }
         .part1{display: none;z-index: 999;}
+        /* #head1nm */
         .head1 a{
             text-decoration: none;
-            padding: 0% 100px 0px 20px;
+            padding: 0px 160px 0px 5px;
             color: dimgrey;
             display: block;
             font-size: 18px;
@@ -89,17 +86,9 @@
             background-color:#99b9ea;
             color:blueviolet;
         }
-        .head1 a:active{
-            background-color:blue;
-            color:paleturquoise;
-        }
-        .head1:hover .part1 {
-            display: block;
-            clear: both;
-        }
-        img{
-            float: left;
-        }
+        .head1 a:active{background-color:blue;color:paleturquoise;}
+        .head1:hover .part1 {display: block;clear: both;}
+        img{float: left;}
         .leftb{
             float: left;
             width: 72.83px;
@@ -119,11 +108,7 @@
             font-family: 'Consolas';
             font-size: 30;
         }
-        .l1:active{
-            top: 2px;
-            left: 2px;
-            box-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-        }
+        .l1:active{top: 2px;left: 2px;box-shadow: 1px 1px 3px rgba(0,0,0,0.8);}
         .lia{
             padding: 0px;
             text-decoration: none;
@@ -146,20 +131,13 @@
             font-size: 30px;
             font-family:'Consolas';
         }
-        .mpicimg{
-            position: relative;
-            top: 12px;
-            left: 20px;
-        }
-        .mpicimg:hover{
-            float: left;
-            transform: scale(2.0, 2.0);
-            transition: all .5s ease-in 0s;
-        }
+        .mpicimg{position: relative;top: 12px;left: 20px;}
+        .mpicimg:hover{float: left;transform: scale(2.0, 2.0);transition: all .5s ease-in 0s;}
         footer{
             background-color: #000;
             box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
             height: 20%;
+            color: aquamarine;
         }
     </style>
 </head>
@@ -212,20 +190,47 @@
         var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()); return YY + MM + DD; 
     } 
 </script> 
+<script>
+    window.onload=function(){
+    //     var but=document.getElementById("b1");
+    //     var box1=document.getElementById("box21");
+    //     but.onclick=function(){
+    //         box1.style.width="100px";
+    //         box1.style.height="100px";
+    //         box21.style.backgroundColor="yellow";
+    //     }
+        var box1=document.getElementById("timer");
+        box1.onmousedown=function(event){
+            event=event||window.event;
+            var xx=event.clientX-box1.offsetLeft;
+            var yy=event.clientY-box1.offsetTop;
+            box1.onmousemove=function(event){
+                event=event||window.event;
+                var left=event.clientX;
+                var top=event.clientY;
+                box1.style.left=left-xx+"px";
+                box1.style.top=top-yy+"px";
+            }
+            box1.onmouseup=function(){
+                box1.onmousemove=null;
+            }
+        }
+    }
+</script>
 <body>
     
     <header>
-        <a href="javascript:;"><img src="./h1.png" height="30px" class="headimg"></a>
+        <a href="javascript:;"><img src="./Mediasource/h1.png" height="30px" class="headimg"></a>
         <div>
             <ul class="head1">
                 <li>
-                    <a href="javascript:;" class="head1nm">Home</a>
-                    <ul class="part1">
+                    <a href="./index.html" class="head1nm">Home</a>
+                    <!-- <ul class="part1">
                         <li><a href="javascript:;">123</a></li>
                         <li><a href="javascript:;">123</a></li>
                         <li><a href="javascript:;">123</a></li>
                         <li><a href="javascript:;">123</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
             </ul>
         </div>
@@ -234,10 +239,10 @@
                 <li>
                     <a href="javascript:;" class="head1nm">Softwares</a>
                     <ul class="part1">
-                        <li><a href="javascript:;">123</a></li>
-                        <li><a href="javascript:;">123</a></li>
-                        <li><a href="javascript:;">123</a></li>
-                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">OnlineJudge</a></li>
+                        <li><a href="javascript:;">OfflineJudge</a></li>
+                        <!-- <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">123</a></li> -->
                     </ul>
                 </li>
             </ul>
@@ -245,13 +250,20 @@
         <div>
             <ul class="head1">
                 <li>
-                    <a href="javascript:;" class="head1nm">Documents</a>
+                    <a href="javascript:;" class="head1nm">Downloads</a>
                     <ul class="part1">
-                        <li><a href="javascript:;">123</a></li>
-                        <li><a href="javascript:;">123</a></li>
-                        <li><a href="javascript:;">123</a></li>
-                        <li><a href="javascript:;">123</a></li>
+                        <li><a href="javascript:;">Problems</a></li>
+                        <li><a href="javascript:;">EBooks</a></li>
+                        <li><a href="javascript:;">Learning</a></li>
+                        <!-- <li><a href="javascript:;">123</a></li> -->
                     </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="./HTMLSource/About.html" class="head1nm">About</a>
                 </li>
             </ul>
         </div>
@@ -273,21 +285,23 @@
                 <a href="javascript:;" class="lia" >123</a>
             </div>
         </div>
-        <div class="mpic"><img src="./h.png" height="324px" class="mpicimg" ></div>
+        <div class="mpic"><img src="./Mediasource/h.png" height="324px" class="mpicimg" ></div>
         
         <!-- -------------------------------------------------------------------------------- -->
-        <div id="remainTime"> 距CSP-J/S还有：<br>
-            <span id="one"></span>天 
-            <span id="two"></span>时 
-            <span id="three"></span>分 
-            <span id="four"></span>秒 
-        </div>  
+        <div id="timer">
+            <div id="remainTime" > 距CSP-J/S还有：<br>
+                <span id="one"></span>天 
+                <span id="two"></span>时 
+                <span id="three"></span>分 
+                <span id="four"></span>秒 
+            </div>  
+        </div>
         <!-- -------------------------------------------------------------------------------- -->
         
     </main>
     
     <footer>
-
+        
     </footer>
 </body>
 </html>
