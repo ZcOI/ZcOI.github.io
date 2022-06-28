@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AkyOI~AkyooOI</title>
-    <link rel="stylesheet" href="../CSS/reset.css">
-    <link rel="stylesheet" href="../CSS/head.css">
-    <link rel="shortcut icon" href="../Mediasource/logonew.png">
+    <link rel="stylesheet" href="../../CSS/reset.css">
+    <link rel="stylesheet" href="../../CSS/head.css">
+    <link rel="shortcut icon" href="../../Mediasource/logonew.png">
     <style>
         .back{
             z-index: -999;
@@ -17,7 +17,7 @@
             height: 100%;
         }
         html{
-            background-image: url("../HTMLSource/Aboutbgc.jpeg");
+            background-image: url("../../HTMLSource/Aboutbgc.jpeg");
             background-attachment:fixed;
             background-repeat: no-repeat;
             background-size:auto;
@@ -60,21 +60,31 @@
             font-size: 30px;
             color:rgba(162, 0, 184, 0.9);
         }
-        .num,.name{
+        .version,.name{
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
             float: left;
-            margin-left: 5px;
-            margin-right: 5px;
         }
-        .limit,.difficulty{
-            color: blueviolet;
+        .version{
+            width: 100px;
+        }
+        .date,.weight,.updater{
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
             float: right;
-            margin-left: 5px;
-            margin-right: 5px;
+            
         }
-        .num{
-            color: rgb(107, 0, 207);
+        .date,.weight{
+            width: 100px;
         }
-        .name a{text-decoration: none;color: rgb(0, 15, 146);}
+        .updater{
+            width: 150px;
+        }
+        
+        
+/* ------------------------------------------------------------------- */
         .ttop{
             font-family: 'Courier New', Courier, monospace;
             font: bold;
@@ -92,10 +102,10 @@
             background-color: #fff;
             color: blueviolet;
         }
-        .ttop a{
+        a{
             text-decoration: none;
         }
-/* ------------------------------------------------------------------- */
+        
     </style>
 </head>
 
@@ -104,24 +114,24 @@
         <div>
             <ul class="head1">
                 <li>
-                    <a href="../index.html">~AkyOI~</a>
+                    <a href="../../index.html">~AkyOI~</a>
                 </li>
             </ul>
         </div>
         <div>
             <ul class="head1">
                 <li>
-                    <a href="../ProblemList/">ProblemList</a>
+                    <a href="../../ProblemList/">ProblemList</a>
                 </li>
             </ul>
         </div>
         <div>
             <ul class="head1">
                 <li>
-                    <a href="../Softwares/">Softwares</a>
+                    <a href="../../Softwares/">Softwares</a>
                     <ul class="part1">
-                        <li><a href="../Softwares/Online/">OnlineJudge</a></li>
-                        <li><a href="../Softwares/Offline/">OfflineJudge</a></li>
+                        <li><a href="../../Softwares/Online/">OnlineJudge</a></li>
+                        <li><a href="../../Softwares/Offline/">OfflineJudge</a></li>
                     </ul>
                 </li>
             </ul>
@@ -129,11 +139,11 @@
         <div>
             <ul class="head1">
                 <li>
-                    <a href="../Downloads/">Downloads</a>
+                    <a href="../../Downloads/">Downloads</a>
                     <ul class="part1">
-                        <li><a href="../Downloads/Problems/">Problems</a></li>
-                        <li><a href="../Downloads/Books/">EBooks</a></li>
-                        <li><a href="../Downloads/Learning/">Learning</a></li>
+                        <li><a href="../../Downloads/Problems/">Problems</a></li>
+                        <li><a href="../../Downloads/Books/">EBooks</a></li>
+                        <li><a href="../../Downloads/Learning/">Learning</a></li>
                     </ul>
                 </li>
             </ul>
@@ -141,7 +151,7 @@
         <div>
             <ul class="head1">
                 <li>
-                    <a href="../About/">About</a>
+                    <a href="../../About/">About</a>
                 </li>
             </ul>
         </div>
@@ -149,21 +159,22 @@
     </header>
     <div class="back"></div>
     <main>
-        
         <div class="problemlist">
-            <div class="listhead">Problem List</div>
+            <div class="listhead">Software List</div>
             <ul>
                 <li>
-                    <div class="num">A0001</div>
-                    <div class="name"><a href="./A0001.html">Hieda no Akyoo</a></div>
-                    <div class="difficulty">Lunatic</div>
-                    <div class="limit">1s/512MB</div>
+                    <div class="version">Version</div>
+                    <div class="name">Name</div>
+                    <div class="date">Date</div>
+                    <div class="weight">Size</div>
+                    <div class="updater">Updater</div>
                 </li>
                 <li>
-                    Invalued!
-                </li>
-                <li>
-                    Invalued!
+                    <div class="version">Beta</div>
+                    <div class="name"><a href="javascript:;">   OfflineJudgeBeta</a></div>
+                    <div class="date">2022.6.8</div>
+                    <div class="weight">10000TB</div>
+                    <div class="updater">Zchared</div>
                 </li>
             </ul>
             <br><br><br><br><br><br><br><br>
@@ -172,6 +183,8 @@
             <br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br>
+            <br>
+            <br>
         </div>
         <div class="ttop">
             <a href="#top">Top</a>
@@ -182,6 +195,6 @@
     </main>
     <div class="footer">
             AkyOI ~ 2022 | By Zchared 
-        </div>
+    </div>
 </body>
 </html>

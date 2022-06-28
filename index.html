@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="./CSS/head.css">
     <link rel="shortcut icon" href="./Mediasource/logonew.png">
     <style>
+        .back{
+            z-index: -999;
+            background-color: rgba(255,255,255,0.7);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
         html{
             background-image: url("./HTMLSource/Aboutbgc.jpeg");
             background-attachment:fixed;
@@ -22,7 +29,7 @@
         html,main{
             height: auto;
             width: 100%;
-            background-color:rgba(255,255,255,0.7);
+            /* background-color:rgba(255,255,255,0.7);- */
         }
         #remainTime{ 
             /* z-index: 0; */
@@ -144,15 +151,26 @@
         .points{
             float: right;
         }
-        .footer{
-            color:rgba(240, 255, 255,0.5);
-            font-family: 'Cascadia Code';
-            font-size: 20px;
-            line-height: 40px;
-            height: 40px;
-            width: 100%;
-            background-color: rgba(0, 0, 0,0.5);
+        
+        .ttop{
+            font-family: 'Courier New', Courier, monospace;
+            font: bold;
             text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            height: 80px;
+            width: 80px;
+            border: 2px solid black;
+            border-radius: 50px;
+            position:fixed;
+            right: 40px;
+            bottom: 60px;
+            float: right;
+            background-color: #fff;
+            color: blueviolet;
+        }
+        .ttop a{
+            text-decoration: none;
         }
     </style>
     <script>
@@ -254,7 +272,7 @@
         </div>
 
     </header>
-    
+    <div class="back"></div>
     <main>
         <div class="basicinfo">
             <img src="./HTMLSource/AkyoiLogo.webp" height="350px" >
@@ -368,11 +386,13 @@
                 <a href="javascript:;" class="ranklink">See More...</a>
             </ul>
         </div>
-
-        <div class="footer">
-            AkyOI ~ 2022 | By Zchared 
+        <div class="ttop">
+            <a href="#top">Top</a>
         </div>
+        
     </main>
-
+    <div class="footer">
+        AkyOI ~ 2022 | By Zchared 
+    </div>
 </body>
 </html>
