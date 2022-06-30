@@ -10,12 +10,6 @@
     <link rel="stylesheet" href="../CSS/head.css">
     <link rel="shortcut icon" href="../Mediasource/logonew.png">
     <style>
-        a{
-            text-decoration: none;
-            line-height: 100%;
-            font-size: 25px;
-            font-family: 'Consolas', Courier, monospace;
-        }
         .back{
             z-index: -999;
             background-color: rgba(255,255,255,0.7);
@@ -37,7 +31,6 @@
             width: 100%;
             /* background-color:rgba(255,255,255,0.7); */
         }
-        
 /* ------------------------------------------------------------------- */
         .prob{
             background-color: rgba(255, 255, 255,0.7);
@@ -68,6 +61,12 @@
             font-size: 28px;
             font-family: 'Consolas', Courier, monospace;
         }
+        .prob a{
+            text-decoration: none;
+            line-height: 100%;
+            font-size: 25px;
+            font-family: 'Consolas', Courier, monospace;
+        }
         .input,.output{
             font-family: 'Consolas', Courier, monospace;
             line-height: 25px;
@@ -95,9 +94,7 @@
             background-color: #fff;
             color: blueviolet;
         }
-        .ttop a{
-            text-decoration: none;
-        }
+
 /* ------------------------------------------------------------------- */
     </style>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
@@ -157,7 +154,7 @@
             <div class="probhead">A0001 Hieda no Akyuu</div>
             <br><br>
             <div class="part">[Descriptions]</div>
-            <div class="cont">Give you a number n.Please output some strings of"Hieda no Akyuu",the number of these strings is n.They are divided by space or newline.</div>
+            <div class="cont">Give you a number n.Please output some strings of"Hieda no Akyuu",the number of these strings is n.They are divided by space or \n.</div>
             <div class="part"><br>[Samples]</div>
             <ul>
                 <li>
@@ -167,7 +164,7 @@
             </ul>
             <div class="part"><br>[Limits]</div>
             <div class="cont">Time:1s <br>Memory:512MB <br><br>
-                <label for="">Limits:</label>
+                Limits:
                 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>≤</mo><mn>1</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></math>
             </div>
             <br>
