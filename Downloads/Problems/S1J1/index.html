@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkyOI~AkyooOI</title>
+    <link rel="stylesheet" href="../../../CSS/reset.css">
+    <link rel="stylesheet" href="../../../CSS/head.css">
+    <link rel="shortcut icon" href="../../../Mediasource/logonew.png">
+    <style>
+        .back{
+            z-index: -999;
+            background-color: rgba(255,255,255,0.7);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        html{
+            background-image: url("../../../HTMLSource/Aboutbgc.jpeg");
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size:auto;
+        }
+        *{
+            background-repeat: no-repeat;
+        }
+        html,main{
+            height: auto;
+            width: 100%;
+            /* background-color:rgba(255,255,255,0.7); */
+        }
+
+/* ------------------------------------------------------------------- */
+
+        .problemlist{
+            position: relative;
+            top: 40px;
+            
+            margin-left: 15%;
+            border-radius: 10px;
+            /* overflow-x: hidden; */
+            border: 3px rgba(63, 43, 155,0.7) solid;
+            width: 70%;
+        }
+        .problemlist li{
+            overflow-x: hidden;
+            font-family: 'Cascadia Code';
+            text-decoration: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 20px;
+            height: 30px;
+            line-height: 30px;
+            border:1px rgb(33, 103, 255) solid;
+            border-bottom: 0px;
+            background-color: rgba(127, 246, 255,0.7);
+        }
+        li a{
+            margin-left: 10px;
+        }
+        .listhead{
+            text-align: center;
+            font-family: 'Cascadia Code';
+            font-size: 30px;
+            color:rgba(162, 0, 184, 0.9);
+        }
+        
+        .ttop{
+            font-family: 'Courier New', Courier, monospace;
+            font: bold;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            height: 80px;
+            width: 80px;
+            border: 2px solid black;
+            border-radius: 50px;
+            position:fixed;
+            right: 40px;
+            bottom: 60px;
+            float: right;
+            background-color: #fff;
+            color: blueviolet;
+        }
+        .name{
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 300px;
+            /* line-height: 100%; */
+        }
+        .Updater,.time,.type,.difficulty,.auther{
+            float: right;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 150px;
+        }
+/* ------------------------------------------------------------------- */
+        .ttop{
+            font-family: 'Courier New', Courier, monospace;
+            font: bold;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            height: 80px;
+            width: 80px;
+            border: 2px solid black;
+            border-radius: 50px;
+            position:fixed;
+            right: 40px;
+            bottom: 60px;
+            float: right;
+            background-color: #fff;
+            color: blueviolet;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../../index.html">~AkyOI~</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../../ProblemList/">ProblemList</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../../Softwares/">Softwares</a>
+                    <ul class="part1">
+                        <li><a href="../../../Softwares/Online/">OnlineJudge</a></li>
+                        <li><a href="../../../Softwares/Offline/">OfflineJudge</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../../Downloads/">Downloads</a>
+                    <ul class="part1">
+                        <li><a href="../../../Downloads/Problems/">Problems</a></li>
+                        <li><a href="../../../Downloads/Books/">EBooks</a></li>
+                        <li><a href="../../../Downloads/Learning/">Learning</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../../About/">About</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+    <div class="back"></div>
+    <main>
+        
+        <div class="problemlist">
+            <div class="listhead">Download List</div>
+            <ul>
+                <li>
+                    <div class="name">Name</div>
+                    <div class="difficulty">Difficulty</div>
+                    <div class="type">Type</div>
+                    <div class="Updater">Updater</div>
+                    <div class="time">Time</div>
+                    
+                </li>
+                <li>
+                    <div class="name"><a href="./1CSP-J1.pdf">CSP2021-J1</a></div>
+                    <div class="difficulty">Normal</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                <li>
+                    <div class="name"><a href="./1CSP-S1.pdf">CSP2021-S1</a></div>
+                    <div class="difficulty">Hard</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                <li>
+                    <div class="name"><a href="./2csp2020-junior-c++-b (1).pdf">CSP2020-J1</a></div>
+                    <div class="difficulty">Normal</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                <li>
+                    <div class="name"><a href="./2CSP2020-senior-C-A.pdf">CSP2020-S1</a></div>
+                    <div class="difficulty">Hard</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                <li>
+                    <div class="name"><a href="./3入门组C++（CSP2019-junior-C++-A）.pdf">CSP2019-J1</a></div>
+                    <div class="difficulty">Normal</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                <li>
+                    <div class="name"><a href="./3提高组C++（CSP2019-senior-C++-A）.pdf">CSP2019-S1</a></div>
+                    <div class="difficulty">Hard</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                <li>
+                    <div class="name"><a href="./4洛谷初赛模拟.pdf">洛谷初赛模拟01</a></div>
+                    <div class="difficulty">Normal+</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                <li>
+                    <div class="name"><a href="./5洛谷初赛模拟2020.pdf">洛谷初赛模拟</a></div>
+                    <div class="difficulty">Normal+</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                
+                <li>
+                    <div class="name"><a href="./6CSP-S初赛模拟2019.pdf">S初赛模拟</a></div>
+                    <div class="difficulty">Normal+</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                <li>
+                    <div class="name"><a href="./7CSP-J初赛模拟题1.pdf">J初赛模拟</a></div>
+                    <div class="difficulty">Normal</div>
+                    <div class="type">PDF</div>
+                    <div class="Updater">Zchared</div>
+                    <div class="time">2022/6/30</div>
+                </li>
+                
+
+
+                
+            </ul>
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br>
+            
+        </div>
+        <div class="ttop">
+            <a href="#top">Top</a>
+        </div>
+        <br><br><br>
+        
+        
+    </main>
+    <div class="footer">
+            AkyOI ~ 2022 | By Zchared 
+    </div>
+</body>
+</html>
