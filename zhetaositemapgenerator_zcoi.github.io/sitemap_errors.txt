@@ -1,0 +1,14 @@
+https://zcoi.github.io/Downloads/Books/编程之美/
+https://zcoi.github.io/Downloads/Books/NOIP复习资料（C++）.pdf
+https://zcoi.github.io/Downloads/Books/NOI大纲.pdf
+https://zcoi.github.io/Downloads/Books/啊哈！算法.pdf
+https://zcoi.github.io/Downloads/Books/骗分导论(2).pdf
+https://zcoi.github.io/Downloads/Problems/Problems/CSP2021 S2 (1).pdf
+https://zcoi.github.io/Downloads/Problems/Problems/CSP2021 J2.pdf
+https://zcoi.github.io/Downloads/Problems/S1J1/2csp2020-junior-c++-b (1).pdf
+https://zcoi.github.io/Downloads/Problems/S1J1/3入门组C++（CSP2019-junior-C++-A）.pdf
+https://zcoi.github.io/Downloads/Problems/S1J1/3提高组C++（CSP2019-senior-C++-A）.pdf
+https://zcoi.github.io/Downloads/Problems/S1J1/4洛谷初赛模拟.pdf
+https://zcoi.github.io/Downloads/Problems/S1J1/5洛谷初赛模拟2020.pdf
+https://zcoi.github.io/Downloads/Problems/S1J1/6CSP-S初赛模拟2019.pdf
+https://zcoi.github.io/Downloads/Problems/S1J1/7CSP-J初赛模拟题1.pdf
