@@ -157,26 +157,48 @@
     <div class="back"></div>
     <main>
         <div class="prob">
-            <div class="probhead">A0001 Hieda no Akyuu</div>
+            <div class="probhead">A0006 阶乘问题</div>
             <br><br>
             <div class="part">[Descriptions]</div>
-            <div class="cont">Give you a number n.Please output some strings of"Hieda no Akyuu",the number of these strings is n.They are divided by space or \n.</div>
+            <div class="cont">
+                给定两个数，n 和 p。请你求出在 p 进制下 n!最后有几个 0.
+                <br>例如 p=10,n=5
+                <br>十进制下，5 的乘阶为 120，最后有 1 个 0.
+            </div>
+            <div class="part"><br>[Input Form]</div>
+            <div class="cont">一行 2 个数，分别为 n，p</div>
+            <div class="part"><br>[Output Form]</div>
+            <div class="cont">一行一个数，即在 p 进制下 n!最后 0 的数目。</div>
             <div class="part"><br>[Samples]</div>
             <ul>
                 <li>
-                    <div class="input">3</div>
-                    <div class="output">Hieda no Akyuu <br>Hieda no Akyuu <br>Hieda no Akyuu <br></div>
+                    <div class="cont">Input:</div>
+                    <div class="input">5 10</div>
+                    <div class="cont">Output:</div>
+                    <div class="output">1<br></div>
+                </li>
+
+                <br>
+                <li>
+                    <div class="cont">Input:</div>
+                    <div class="input">123 12</div>
+                    <div class="cont">Output:</div>
+                    <div class="output">58<br></div>
                 </li>
             </ul>
+            <br>
             <div class="part"><br>[Limits]</div>
-            <div class="cont">Time:1s <br>Memory:512MB <br><br>
+            <div class="cont">Time:1s <br>Memory:256MB <br><br>
                 Limits:
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>≤</mo><mn>1</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></math>
+                <br>
+                <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>2</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>1000000</mn></mrow></math>
+                <br>
+                <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>2</mn><mo>≤</mo><mi>p</mi><mo>≤</mo><mn>100000</mn></mrow></math>
             </div>
             <br>
-            <div class="part">[Offline Judge]</div>
+            <!-- <div class="part">[Offline Judge]</div>
             <a href="./ProblemSource/A0001.pdata">A0001.pdata<br></a>
-            <br>
+            <br> -->
         </div>
         <br><br><br>
         <br><br><br>

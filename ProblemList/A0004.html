@@ -157,26 +157,35 @@
     <div class="back"></div>
     <main>
         <div class="prob">
-            <div class="probhead">A0001 Hieda no Akyuu</div>
+            <div class="probhead">A0004 试题解答</div>
             <br><br>
             <div class="part">[Descriptions]</div>
-            <div class="cont">Give you a number n.Please output some strings of"Hieda no Akyuu",the number of these strings is n.They are divided by space or \n.</div>
+            <div class="cont">首先给你一个数 n，表示有多少个题。<br>
+                之后每个题计算对应的值并输出对应表达式。</div>
+            <div class="part"><br>[Input Form]</div>
+            <div class="cont">第一行一个数 n。<br>
+                之后 n 行每行两个数字和一个字符，分别为第一个数，第二个数，操作类型。</div>
+            <div class="part"><br>[Output Form]</div>
+            <div class="cont">共 n 行对应的表达式。</div>
             <div class="part"><br>[Samples]</div>
             <ul>
                 <li>
-                    <div class="input">3</div>
-                    <div class="output">Hieda no Akyuu <br>Hieda no Akyuu <br>Hieda no Akyuu <br></div>
+                    <div class="cont">Input:</div>
+                    <div class="input">3<br>1 2 +<br>3 2 -<br>5 6 *<br></div>
+                    <div class="cont">Output:</div>
+                    <div class="output">1+2=3<br>3-2=1<br>5*6=30<br></div>
                 </li>
+                
             </ul>
             <div class="part"><br>[Limits]</div>
-            <div class="cont">Time:1s <br>Memory:512MB <br><br>
+            <div class="cont">Time:1s <br>Memory:128MB <br><br>
                 Limits:
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>≤</mo><mn>1</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></math>
+                <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo>≤</mo><mn>10000</mn></mrow></math>
             </div>
             <br>
-            <div class="part">[Offline Judge]</div>
+            <!-- <div class="part">[Offline Judge]</div>
             <a href="./ProblemSource/A0001.pdata">A0001.pdata<br></a>
-            <br>
+            <br> -->
         </div>
         <br><br><br>
         <br><br><br>
