@@ -1,3 +1,7 @@
+html{
+    min-width:1903px;
+    background-size: cover;
+}
 .footer{
     position:relative;
     bottom: 0px;
@@ -11,6 +15,7 @@
     text-align: center;
 }
 header{
+    overflow:auto;
     z-index: 999;
     position: fixed;
     font-family: 'Cascadia Code';
@@ -19,40 +24,32 @@ header{
     background-color: #99d9ea;
 }
 header div{
-    position:relative;
-    z-index: 999;
+    /* position:fixed; */
     float: left;
 }
 .head1{
     list-style: none;
     height: 30px;
-    width:  165px;
+    width:165px;
     background-color:#c8bfe7;
     line-height:30px;
 }
 .part1 a{
     font-family: 'Cascadia Code';
-    display: none;
-    min-width: 0px ;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 100px 0px;
-    margin: 0px;
     background-color:rgba(100, 149, 237,0.9);
 }
 .part1{display: none;z-index: 999;}
 .head1 a{
     text-decoration: none;
-    padding: 0px 160px 0px 5px;
+    padding: 0px 5px 0px 5px;
     color: dimgrey;
     display: block;
     font-size: 18px;
-    clear: both;
 }
 .head1 a:hover{
-    clear: both;
-    display: block;
     background-color:#99b9ea;
     color:blueviolet;
 }
 .head1 a:active{background-color:blue;color:paleturquoise;}
-.head1:hover .part1 {display: block;clear: both;}
+.head1:hover .part1 {display: block;}
