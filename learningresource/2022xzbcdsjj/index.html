@@ -151,12 +151,12 @@
             <br><br>
             <iframe src="//player.bilibili.com/player.html?aid=343012968&bvid=BV1794y1R7bL&cid=762066161&page=1&high_quality=1&danmaku=0" width="80%" height="800px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
             <br><br><br><br>
-            <div class="problemhead">T1 - 数字三角形</div>
+            <div class="problemhead">T1 - 数字正方形</div>
             <a href="../../ProblemList/A0002.html">Link.</a>
             <div class="mainptext">
-                3s/512MB 的限制感觉作为入门题给的太过于大了
-                <br> n<=300
-                <br> 这题模拟就行了，相比较 CSP-S2020 的 T1 的大模拟，这题简直有点基础的直接秒了。
+                1s/512MB 的限制感觉作为签到题给的太过于大了
+                <br> n ≤ 300
+                <br> 这题模拟就行了，相比较 CSP-S 2020 的 T1 的大模拟，这题简直有点基础的直接秒了。
                 <br>主要就是每次循环，开个变量存上一行最后一个数字。记得这个变量要及时 mod 10
                 <br>时间复杂度 O(n^2)
             </div>
@@ -164,9 +164,9 @@
             <a href="../../ProblemList/A0003.html">Link.</a>
             <div class="mainptext">
                 限制 1s/128MB,是非常充裕的了。
-                <br>N（-1000000000≤N≤1000000000）。
-                <br>这题本人直接用字符串做（看 N 的范围,用字符串完全不用担心空间会爆）
-                <br>开一个 bool 变量来记录是否为负数。如果字符串最前面一位（即 s[0]）为‘-’的话，就是负数。
+                <br>N（-1000000000 ≤ n ≤ 1000000000）。
+                <br>这题本人直接用字符串做（看 n 的范围,用字符串完全不用担心空间会爆）
+                <br>开一个 bool 变量来记录是否为负数。如果字符串最前面一位（即 s[0]）为‘ - ’的话，就是负数。
                 <br>舍去 0 的话，开循环进行判断就行了。
                 <br>时间复杂度 O(s.length())
             </div>
@@ -174,7 +174,7 @@
             <a href="../../ProblemList/A0004.html">Link.</a>
             <div class="mainptext">
                 1s/128MB 随便浪费吧
-                <br>n<=10000
+                <br>n ≤ 10000
                 <br>慢慢细心模拟就行了.(由于我没有原题，所以不知道有没有算除法的。反正加上判定没坏处)
                 <br>时间复杂度 O(n)
             </div>
@@ -186,7 +186,7 @@
                 <br>方法一：记忆化搜索
                 <br>当下面的 DP 做就行了。换种写法就是记忆化搜索。
                 <br>方法二：入门 DP 题
-                <br>读题再写状态转移方程就行了。
+                <br>读题再写状态转移方程就行了。注意三个递推式的顺序。
                 <br>dp[0]=0;
                 <br>dp[1]=0;
                 <br>dp[2]=2;
@@ -205,7 +205,7 @@
                 <br>(在《算法竞赛进阶指南》P138 也有道题和这道题差不多（叫：阶乘分解）)
                 <br>1s/256MB 感觉暴力还是要优化的
                 <br>我们从简单的问题开始考虑
-                <br>假如 p=10，那么什么时候 n!会出现 0？
+                <br>假如 p = 10，那么什么时候 n!会出现 0？
                 <br>很容易想到，利用p进制的思维，当 n！的质因数分解中，有多少个 2 和 5 的乘积，末尾就有多少个 0。之后，ans=min(num(2),num(5))
                 <br>考虑到一个 p 可能有多个质因子，我们直接开数组。
                 <br>py[]用来存 p 的质因子是啥。pynum[]用来存质因子 py[]在 p 的质因数分解中有多少个。numy[]用来存对应 n！的质因数分解中，质因子 py[]有多少个。之后：ans=min(numy[i]/pynum[i]);
@@ -213,7 +213,7 @@
                 <br>时间复杂度大约 O(n*sqrt(n))(感觉这个优化后方法的时间复杂度不太好分析，这个时间复杂度可能不太对。)
                 <br>其实还可以优化
                 <br>直接上结论。
-                <br>N!的质因数分解中，质因子 p 的个数为
+                <br>n!的质因数分解中，质因子 p 的个数为
                 <br>(公式抄的《算法竞赛进阶指南》)
                 <img src="./gs0.png" alt="gs0" width="400px">
                 <br>于是原来算法的 O(n*sqrt(n))被优化成了 O(nlogn)
