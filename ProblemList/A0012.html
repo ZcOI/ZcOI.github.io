@@ -157,31 +157,32 @@
     <div class="back"></div>
     <main>
         <div class="prob">
-            <div class="probhead">A0002 数字正方形</div>
-            <br>我也不知道为啥以前写成“数字三角形”了<br>
-            <br>
+            <div class="probhead">JSOI-jibensuanfafuxi1 T型骨牌(domino)</div>
+            <br><br>
             <div class="part">[Descriptions]</div>
-            <div class="cont">给定 n(n<=300),输出从 1 开始不断循环输出 0~9 的正方形。</div>
+            <div class="cont">在n×m 的棋盘上，摆入T型。T型可以旋转，具体包括如下四个样式（#代表被T型占据的格子，.代表自由的格子）<br>###        ..#        .#.        #..<br>
+                .#.        ###        .#.        ###<br>
+                .#.        ..#        ###        #..<br>问在 n×m 的棋盘上最多能摆入多少个不重叠的T型。</div>
             <div class="part"><br>[Input Form]</div>
-            <div class="cont">一行,一个数 n</div>
+            <div class="cont">一行两个数 n,mn,m。</div>
             <div class="part"><br>[Output Form]</div>
-            <div class="cont">n 行的数字正方形</div>
+            <div class="cont">一个数，最多能放入多少个T型。</div>
             <div class="part"><br>[Samples]</div>
             <ul>
                 <li>
-                    <div class="input">5</div>
-                    <div class="output">12345<br>67890<br>12345<br>67890<br>12345</div>
+                    <div class="input">5 6
+                    </div>
+                    <div class="output">4
+                    </div>
                 </li>
             </ul>
             <div class="part"><br>[Limits]</div>
-            <div class="cont">Time:3s <br>Memory:512MB <br><br>
-                Limits:
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo>≤</mo><mn>300</mn></mrow></math>
+            <div class="cont">Time:1s <br>Memory:256MB <br><br>
+                Limits: <br>
+                对于 100\%100% 的数据，1≤n,m≤9。
+                <!-- <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>≤</mo><mn>1</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></math> -->
             </div>
             <br>
-            <!-- <div class="part">[Offline Judge]</div>
-            <a href="./ProblemSource/A0001.pdata">A0001.pdata<br></a>
-            <br> -->
         </div>
         <br><br><br>
         <br><br><br>

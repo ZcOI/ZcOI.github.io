@@ -157,31 +157,37 @@
     <div class="back"></div>
     <main>
         <div class="prob">
-            <div class="probhead">A0002 数字正方形</div>
-            <br>我也不知道为啥以前写成“数字三角形”了<br>
-            <br>
+            <div class="probhead">JSOI-tu04 学校网络（network）</div>
+            <br><br>
             <div class="part">[Descriptions]</div>
-            <div class="cont">给定 n(n<=300),输出从 1 开始不断循环输出 0~9 的正方形。</div>
+            <div class="cont">三江省的几所 OI 强校的神犇发明了一种人工智能，可以 AC 任何题目，他们决定建立一个网络来共享这个软件。但是由于他们脑力劳动过多导致全身无力,身体被掏空，他们向你求救。 n所学校 (1≤n≤10000)， 已知他们之间设计好的网络共有 m 条线路，为了保证高速，网络是单向的。现在请你告诉他们至少选几所学校作为共享软件的母机，能使每所学校都可以用上这款软件。再告诉他们至少要添加几条线路能使任意一所学校作为母机都可以使别的学校使用上述软件。</div>
             <div class="part"><br>[Input Form]</div>
-            <div class="cont">一行,一个数 n</div>
+            <div class="cont">第一行一个正整数 n。 接下来 n 行每行有若干个整数，用空格隔开。 第 i+1 行，输入若干个非零整数 x，表示从 i 到 x有一条线路。以0 作为结束标志。</div>
             <div class="part"><br>[Output Form]</div>
-            <div class="cont">n 行的数字正方形</div>
+            <div class="cont">第一行一个整数，表示至少选几所学校作为共享软件的母机，能使每所学校都可以用上。 第二行一个整数，表示至少要添加几条线路能使任意一所学校作为母机都可以使别的学校使用上软件。</div>
             <div class="part"><br>[Samples]</div>
             <ul>
                 <li>
-                    <div class="input">5</div>
-                    <div class="output">12345<br>67890<br>12345<br>67890<br>12345</div>
+                    <div class="input">5
+                        <br>2 0
+                        <br>4 0
+                        <br>5 0
+                        <br>1 0
+                        <br>0
+                        
+                    </div>
+                    <div class="output"><br>2
+                        <br>2
+                    </div>
                 </li>
             </ul>
             <div class="part"><br>[Limits]</div>
             <div class="cont">Time:3s <br>Memory:512MB <br><br>
-                Limits:
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo>≤</mo><mn>300</mn></mrow></math>
+                Limits: <br>
+                1≤ m ≤5000000， 1≤n≤10000 。
+                <!-- <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>≤</mo><mn>1</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></math> -->
             </div>
             <br>
-            <!-- <div class="part">[Offline Judge]</div>
-            <a href="./ProblemSource/A0001.pdata">A0001.pdata<br></a>
-            <br> -->
         </div>
         <br><br><br>
         <br><br><br>

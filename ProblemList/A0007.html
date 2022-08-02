@@ -157,31 +157,35 @@
     <div class="back"></div>
     <main>
         <div class="prob">
-            <div class="probhead">A0002 数字正方形</div>
-            <br>我也不知道为啥以前写成“数字三角形”了<br>
-            <br>
+            <div class="probhead">JSOI-tu01 求最大权值和</div>
+            <br><br>
             <div class="part">[Descriptions]</div>
-            <div class="cont">给定 n(n<=300),输出从 1 开始不断循环输出 0~9 的正方形。</div>
+            <div class="cont">育红小学为寓教于乐，探索新的数学教学方式，在游戏教学方面花费了大量精力。为此专门拿出一块运动场地，在场地内布置了n个圆圈，教师可在不同圆圈之间灵活标出m条有向道路。每次进行游戏教学时，教师就在每个圆圈内写上一个自然数，同时调整学生可行走的道路。要求学生找一条路径，使路径经过的圆圈内的数值总和最大。学生只需要求出总和，教师想看谁找的准，算的块。
+                允许多次经过一条边或者一个圆圈，但是，重复经过的圆圈内的数值只计算一次。</div>
             <div class="part"><br>[Input Form]</div>
-            <div class="cont">一行,一个数 n</div>
+            <div class="cont">第一行两个正整数 n,m 第二行 n个整数，依次代表点权 第三至 m+2 行，每行两个整数 u,v，表示一条 u→v 的有向边。</div>
             <div class="part"><br>[Output Form]</div>
-            <div class="cont">n 行的数字正方形</div>
+            <div class="cont">共一行，最大的点权之和。</div>
             <div class="part"><br>[Samples]</div>
             <ul>
                 <li>
-                    <div class="input">5</div>
-                    <div class="output">12345<br>67890<br>12345<br>67890<br>12345</div>
+                    <div class="input">
+                        2 2<br>
+                        1 1<br>
+                        1 2<br>
+                        2 1
+                    </div>
+                    <div class="output">2</div>
                 </li>
             </ul>
             <div class="part"><br>[Limits]</div>
-            <div class="cont">Time:3s <br>Memory:512MB <br><br>
+            <div class="cont">Time:3s <br>Memory:128MB <br><br>
                 Limits:
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo>≤</mo><mn>300</mn></mrow></math>
+                <br>
+                对于 100% 的数据， 1≤n≤10000， 1≤m≤100000，点权∈[0,1000]
+                <!-- <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>≤</mo><mn>1</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></math> -->
             </div>
             <br>
-            <!-- <div class="part">[Offline Judge]</div>
-            <a href="./ProblemSource/A0001.pdata">A0001.pdata<br></a>
-            <br> -->
         </div>
         <br><br><br>
         <br><br><br>

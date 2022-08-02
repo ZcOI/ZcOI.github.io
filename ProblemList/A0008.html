@@ -157,31 +157,32 @@
     <div class="back"></div>
     <main>
         <div class="prob">
-            <div class="probhead">A0002 数字正方形</div>
-            <br>我也不知道为啥以前写成“数字三角形”了<br>
-            <br>
+            <div class="probhead">JSOI-tu02 图的最大遍历</div>
+            <br><br>
             <div class="part">[Descriptions]</div>
-            <div class="cont">给定 n(n<=300),输出从 1 开始不断循环输出 0~9 的正方形。</div>
+            <div class="cont">给出N个点，M条边的有向图，对于每个点v，求A(v)表示从点v出发，能到达的编号最大的点。</div>
             <div class="part"><br>[Input Form]</div>
-            <div class="cont">一行,一个数 n</div>
+            <div class="cont">第1 行，2 个整数N,M。 接下来M行，每行2个整数Ui,Vi，表示边 (Ui,Vi)。点用1,2,⋯,N编号。</div>
             <div class="part"><br>[Output Form]</div>
-            <div class="cont">n 行的数字正方形</div>
+            <div class="cont">N 个整数A(1),A(2),⋯,A(N)。</div>
             <div class="part"><br>[Samples]</div>
             <ul>
                 <li>
-                    <div class="input">5</div>
-                    <div class="output">12345<br>67890<br>12345<br>67890<br>12345</div>
+                    <div class="input">4 3
+                        <br>1 2
+                        <br>2 4
+                        <br>4 3                        
+                    </div>
+                    <div class="output">4 4 3 4</div>
                 </li>
             </ul>
             <div class="part"><br>[Limits]</div>
-            <div class="cont">Time:3s <br>Memory:512MB <br><br>
-                Limits:
-                <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo>≤</mo><mn>300</mn></mrow></math>
+            <div class="cont">Time:1s <br>Memory:128MB <br><br>
+                Limits: <br>
+                • 对于60% 的数据，1 ≤ N.M≤1000； • 对于100% 的数据，1 ≤≤N,M≤100000。
+                <!-- <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>≤</mo><mn>1</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></math> -->
             </div>
             <br>
-            <!-- <div class="part">[Offline Judge]</div>
-            <a href="./ProblemSource/A0001.pdata">A0001.pdata<br></a>
-            <br> -->
         </div>
         <br><br><br>
         <br><br><br>
