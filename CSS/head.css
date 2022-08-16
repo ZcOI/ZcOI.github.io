@@ -35,7 +35,8 @@ header div{
     line-height:30px;
 }
 .part1 a{
-    font-family: 'Cascadia Code';
+    font-family: 'Cascadia Code'，'Consolas','Courier New';
+    /* font-family: 'Courier New', Courier, monospace; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color:rgba(100, 149, 237,0.9);
 }
