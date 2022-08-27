@@ -2,11 +2,31 @@ html{
     min-width:1903px;
     background-size: cover;
 }
+@font-face {
+    font-family:"Cascadia Code";
+    src: url(../fonts/CascadiaCode-2111.01/ttf/CascadiaCode.ttf);
+}
+@font-face {
+    font-family:"Cascadia Code Italic";
+    src: url(../fonts/CascadiaCode-2111.01/ttf/CascadiaCodeItalic.ttf);
+}
+@font-face {
+    font-family:"Courier New";
+    src: url(../fonts/Courier-New/cour-2.ttf);
+}
+@font-face {
+    font-family:"Courier New Italic";
+    src: url(../fonts/Courier-New/Courier-BOLDITALIC-1.ttf);
+}
+@font-face {
+    font-family:"Consolas";
+    src: url(../fonts/Consolas/consola-1.ttf);
+}
 .footer{
     position:relative;
     bottom: 0px;
     color:rgba(240, 255, 255,0.5);
-    font-family: 'Cascadia Code';
+    font-family: "Cascadia Code";
     font-size: 20px;
     line-height: 40px;
     height: 40px;
