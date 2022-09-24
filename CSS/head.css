@@ -22,14 +22,14 @@ html{
     font-family:"Consolas";
     src: url(../fonts/Consolas/consola-1.ttf);
 }
-@font-face {
+/* @font-face {
     font-family:"楷体";
     src: url(../fonts/Others/仓耳与墨W02.ttf);
 }
 @font-face {
     font-family:"楷体bold";
     src: url(../fonts/Others/仓耳与墨W05.ttf);
-}
+} */
 .footer{
     position:relative;
     bottom: 0px;
