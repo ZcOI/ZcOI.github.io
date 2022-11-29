@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkyOI~AkyooOI</title>
+    <link href="../../resource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../resource/css/style2016.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/reset.css">
+    <link rel="stylesheet" href="../../CSS/head.css">
+    <link rel="shortcut icon" href="../../Mediasource/logonew.png">
+    <script type="text/javascript" src="../../resource/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../resource/js/jquery.js"></script>
+    <script type="text/javascript" src="../../resource/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        .back{
+            z-index: -999;
+            background-color: rgba(255,255,255,0.7);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        html{
+            background-image: url("https://s1.ax1x.com/2022/11/12/ziZoE4.jpg");
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+        }
+        *{
+            background-repeat: no-repeat;
+        }
+        html,main{
+            height: auto;
+            width: 100%;
+            /* background-color:rgba(255,255,255,0.7); */
+        }
+
+/* ------------------------------------------------------------------- */
+        .maintext{
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 80%;
+            border: rgba(100, 149, 237,0.8) 2px solid;
+            border-radius: 10px;
+            height: auto;
+            position: relative;
+            left: 10%;
+            top: 50px;
+        }
+        .maintext a{font-family: 'Courier New','楷体', Courier, monospace;font-size: 20px;}
+        .mainptext{
+            line-height: 25px;
+            font-size: 20px;
+            font-family: 'Consolas','等线', Courier, monospace;
+            width: 90%;
+            border: rgba(100, 149, 237,0.8) 2px solid;
+            border-radius: 10px;
+            height: auto;
+            position: relative;
+            left: 5%;
+        }
+        .thead1{
+            line-height: 40px;
+            font-size: 40px;
+            font-family: 'Consolas','楷体', Courier, monospace;
+            font: bold;
+            color: darkorchid;
+        }
+        .problemhead{
+            font-family: 'Courier New','楷体', Courier, monospace;
+            font:bold;
+            font-size: 40px;
+            line-height: 90px;
+            color: cornflowerblue;
+        }
+        .score{
+            font-family: '楷体', 'Courier New', monospace;
+            border: rgba(100, 149, 237,0.8) 2px solid;
+            width: 50%;
+            left: 25%;
+            position: relative;
+            line-height: 40px;
+            font-size: 25px;
+            border-radius: 10px;
+        }
+        .s{
+            float:inline-end;
+            position: relative;
+            border: blueviolet 1px solid;
+            width: 50%;
+            text-align: center;
+        }
+        .sh{
+            border: blueviolet 1px solid;
+            /* width: 50%; */
+            text-align: center;
+        }
+/* ------------------------------------------------------------------- */
+        .ttop{
+            font-family: 'Courier New', Courier, monospace;
+            font: bold;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            height: 80px;
+            width: 80px;
+            border: 2px solid black;
+            border-radius: 50px;
+            position:fixed;
+            right: 40px;
+            bottom: 60px;
+            float: right;
+            background-color: #fff;
+            color: blueviolet;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../index.html">~AkyOI~</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../ProblemList/">ProblemList</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../Softwares/">Softwares</a>
+                    <ul class="part1">
+                        <li><a href="../../Softwares/Online/">OnlineJudge</a></li>
+                        <li><a href="../../Softwares/Offline/">OfflineJudge</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../Downloads/">Downloads</a>
+                    <ul class="part1">
+                        <li><a href="../../Downloads/Problems/">Problems</a></li>
+                        <li><a href="../../Downloads/Books/">EBooks</a></li>
+                        <li><a href="../../Downloads/Learning/">Learning</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="../../About/">About</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+    <div class="back"></div>
+    <main>
+        <div class="maintext">
+            <br>
+            <div class="thead1">NOIP2022游记（By Zchared）</div>
+            <br><br>
+
+
+
+            <!-- <ul class="score">
+                <li class="sh">成绩简略表</li>
+                <li><div><div class="s">Name</div><div class="s">Score</div></div></li>
+                <li><div class="s"></div><div class="s"></div></li>
+                <li><div class="s"></div><div class="s"></div></li>
+                <li><div class="s"></div><div class="s"></div></li>
+            </ul> -->
+            <!-- <a href="../../Downloads/Problems/Local/XZOI.zip">题目及题解资源下载</a> -->
+            <br>
+            <div class="problemhead">Day -n</div>
+            <div class="mainptext">
+                由于疫情原因，再加上高考报名的事，我无缘CSP-S2。。。本以为自己已经AFO了，但是，真的会有奇迹吗？？？<br>
+            </div>
+            <div class="problemhead">Day -n+m</div>
+            <div class="mainptext">
+                经过了CSP-S2考前一周一场大哭之后（其实完全没有因为看到自己暗恋的女同学整天跟别的男生鬼混而伤心。。。毕竟，她，从始至终都没有真心喜欢过我。。。#爷永远爱稗田阿求~~~#），自己大约已经放下了OI。但是，仍处于藕断丝连的状态
+                ，整天感觉自己的生活少了许多光彩，生活也变得空虚。。。少了OI的陪伴，整天晚自习早早地写完作业，就开始无所事事了。。。拿出来42套却盯着英语的A篇的标题下神了一个多小时
+                。。。好怀念写完作业抱着竞赛书的日子。。。OI陪了我三年，有哪个女生可以达到这种成就？？？Of Course目前等于zero。。。
+            </div>
+            <div class="problemhead">Day -7</div>
+            <div class="mainptext">
+                果然，奇迹出现了。。。<!--（那群女生就算个p，整天在我的视线之内，却一点用都没有，整天撒狗粮，戴绿帽，简直比*还*）-->通知来了，果然进NOIP了!这种感觉，真像自己失而复得npy！！
+                抱起了竞赛书，曾经的Ta回来啦~~~拿起稗田阿求发色的笔，接着续写OI缘起~~~之后的几天，每天的生活是如此的充实，虽然班里的ta整天跟ta在上课的时候对视，但是又何妨？？？ta算啥？？？爷高中三年达到的成就是ta三辈子也换不过来的！！！
+                失去我吃亏的是ta，简称：瞎了狗眼~~~<br>JS-448,这串冰冷的数字，看起来是多么亲切~~~
+            </div>
+            <div class="problemhead">Day -6~-3</div>
+            <div class="mainptext">
+                这几天内，写下了承诺书，复习了倍增，二分，图论，背了一些的板子~~~这些日子且过且珍惜！！！期间我考虑过给ta一次机会，然后就试探性的跟ta表白了，虽然没有真正说出某些话，但是看ta的意思是ta拒绝了me。。。没事，等爷拿了国奖ta就真正更加不配爷啦~~~
+
+            </div>
+            <div class="problemhead">Day -2</div>
+            <div class="mainptext">
+                今天的课上的可是真煎熬啊~~~一想到晚上吃饭的时候就要见不到ta了，内心还是有些许期待的。走的时候留给了自己的好朋友一盒零食，在自己桌子上写下“AC++ RP++”之后就走了。终于不用整天为她发愁啦~~~<br>
+                回到家收拾好东西就睡了（当然不能忘记带葡萄糖啊~~~血的教训：NOIP2021的时候，考到只剩半小时的时候，低血糖，思路全断了，脑子里一片空白，最后只有70分的国三）。。。
+            </div>
+            <div class="problemhead">Day -1</div>
+            <div class="mainptext">
+                大清早就乘车去南京了。路上从丰县到睢宁，一路全是大雾，高速全封了。。。无奈将近4个小时路程走了连1/4都不到。还好最后还是在机场那里上了高速。（高速途径安徽的地区，不知道安徽的疫情防控的会不会打电话。ADDed：然而并没有）
+                明显感觉那段在安徽的高速修的有点水。。。不过那天的天空还是很好康滴~~~ ~~~<br>
+                终于到南京了，当时已经是下午两点半了。由于明天考NOIP需要25号的核酸的阴性证明，于是刚下车就去找医院做核酸了。先是去了东部战区总医院，但是那里的核酸检测点已经拆了。没办法，只能徒步2.5km去81医院去做加急核酸。。。<br>
+                核酸采完样了，需要2~3小时才能出结果。。。没办法，由于我手机tm就只有7%电了，进出医院需要扫健康码，没办法，只能在医院里面坐牢好几个小时。。。结果干等到6点，核酸加急的还是没有出来。。。于是立即决定先去恰饭饭~~~<br>
+                当天没吃啥好东西，就一碗米线，还有馄饨。。。（话说我还是第一次见米线里面搀着馄饨的。。。服了，这也叫创新？？？）恰完饭，看见南京本地正做着全民核酸，人不多，跟着做了。。。
+                <br>6点半，回到了医院，报告出了。。。没办法，还得步行到住处。又是将近4km的路。。。没有地铁，也没有公交。。。焯！
+                <br>回到住处，抱起电脑，默了几个板子，就睡了。。。（PS：考完后才发现，自己背的板子一个都没用到）
+            </div>
+            <div class="problemhead">Day O</div>
+            <div class="mainptext">
+                起了个大早，收拾好东西，就走了。早上吃的依旧很简单。。。就不说了。<br>
+                步行到了考点（原本是在南航的，但是考试前一天突然改成了 钟山宾馆（江苏会议中心）），考试的考场还不错，全是古风的建筑，看起来富丽堂皇的（里面光污染真tm重。。。灯的颜色真黄。。。）<br>
+                考前往考场里面望了望，看到了一大堆笔记本电脑。果然，临时考点正如我所料，真tm挤。进了考场，坐在座子上（我的位置还是比较靠门的，左边是个小姐姐，带着口罩长得还不错~~~）<br>
+                开始试机了。在考场中，我听到了熟悉的声音---南大的蒋yy老师，他的声音依旧是那么好听。以前在冬令营的网课一睹他的容貌，如今见到了真的jyy，内心还是有些激动的（毕竟人家是南大的计算机学院的教授嘛）<br>
+                试机的时候打了些板子。。。Just SoSo。。。对了今年依旧是用的JSOI-Linux，只不过今年的网页终于优化UI了，终于不像去年的那样那么丑了。。。其他提交的操作一点都没变。。。<br>
+                用的电脑是thinkpad，Windows10，IntelCore七代i几忘了。。。不得不说，键盘的布局真tm别手，而且手感稀碎，跟敲shit一样。。。还有那小红点，我这辈子绝对不用第二次。。。还有那反人类的触控板，tm只支持单指。。。
+                <br>终于开始发卷了。真是的，下载了题目的压缩包，题面的pdf还tm要密码。。。服了。。。真的有必要嘛？？？密码还是啥solo@2022,看不出来出题人像表达什么。。。
+                拿到第一题，浏览了一遍，明显直觉告诉我这个题不会像去年那样改个算法的板子就能解决的了。。。而且感觉自己脑子里没有算法可以直接解决这个问题。。。于是直觉告诉我这题要用算法来优化枚举，不然就会像我NOIP2021一样少30pts。。。<br>
+                写了大框架，像测试测试暴力的算法写对了没有。。。果然没有写对。。。好吧，开始改BUG。。。直到两小时之后才写正确。。。但是等我像用前缀和+二分来优化算法的时候，却发现自己的二分一直写不对。。。草，晦气。。。<br>
+                但是！！！此时我发现我旁边的那个女生一直tm往我这里瞟，还tm一脸通红。。。淦！晦气！！！中间隔着板子，ta不可能实在看爷的程序，不可能！！！那么这样说，只有一种可能了！她！她不会...吧~~~OhNo！！！（草，我到底在想什么）<br>
+                我放弃了些T1的二分，转而看T2，3.。。果然，看起来都很难。。。我看了一眼T3，是计数问题，我最不擅长计数问题，于是开T2，却一直没有正确的思路。。。于是读了T3的题目，发现自己有了思路，但是由于那题要用Tarjan和v-DCC的缩点，我根本没有背板子，再加上当时时间所剩无几，我就考虑了图是个树的情况写了程序交上去了。。。<br>
+                考试还剩最后半小时，我旁边的那位脸红女人开始tm哼起了小曲。。。md，服了，这tm考场哼小曲，服了。。。不得不说，哼的还不错。<br>
+                时间到了，全体起立，背对电脑，她开始放声歌唱，声音不大，但是既不是中文，也不是日语，更不是英语。。。我尽力去听，直觉告诉我好像是法语。。。我虽然没听过那歌，但是听那歌声唱的真的不错<br>
+                我带的零食没吃，葡萄糖只喝了一小口。。。毕竟这是OI，不是吃零食竞赛<br>
+                等到我签字确认之后，不知道她是不是故意的，她有笔却还要借我的笔。我趁机瞄了一眼，她高二，叫秦一啥的，具体我忘了。。。没认真看。。。从始至终我没有抬头去看一眼她的长相，毕竟，这样是不可能的。。。接下来就靠缘分了。。。<br>
+                出了考场，一身轻松，爷AFO啦~~~现在是真正意义上的啦~~~<br>
+                走的时候，我特意挑了一条经过东南大学的路。毕竟，目标不是白写的~~~<br>
+                接下来就是长达将近5小时的车程， 睡了一路。原本上学的同学也都小休回家了。。。之后也就没啥了<br>
+                对了，最后吐槽一下：ThinkPad的键盘翘起来真tm跟稀烂一样。。。
+            </div>
+            <div class="problemhead">Day 1~+∞</div>
+            <div class="mainptext">
+                之后就是长达5天的五天三检。。。呆家里快闲死了。。。但是又不想回到学校里面，尤其是再次见到ta。。。或许，ta现在已经跟ta的关系很暧昧了吧~~~<br>
+                看了下小图灵的估分（75分），好像这次小图灵的估分比去年保守很多啊，比洛谷少了5分。。。或许是因为去年小图灵的数据太水了吧~~~<br>
+                顺便看了下其他人的NOIP的估分，徐州市的那19个人中，爷竟然排到了第3。。。意料之外啊！！！虽然我知道今年考的很难，但是其他人那么菜是我真的没有想到的啊~~~<br>
+                曾经2020年跟我一起集训的那个运河中学的学生，小图灵估分39，基本上就是没有奖了。。。很遗憾，高中三年，OI没有一个正经国奖。但是人家也根本没有大学学计算机的倾向，OI的奖项对他的意义也不是很大啦~无所谓啦，万一人家其他竞赛有牌呢~~~
+            </div>
+            <div class="problemhead">2023年，我们ICPC见~~~ I AK ICPC ：）</div>
+            <br><br><br>
+
+        </div>
+        <div class="ttop">
+            <a href="#top">Top</a>
+        </div>
+        <br><br><br>
+        <br><br><br><br><br><br>
+        
+        
+    </main>
+    <div class="footer">
+            AkyOI ~ 2022 | By Zchared 
+    </div>
+</body>
+</html>
