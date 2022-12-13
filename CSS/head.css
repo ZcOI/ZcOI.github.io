@@ -1,4 +1,8 @@
 html{
+    /* background-image: url("https://s1.ax1x.com/2022/11/12/ziZoE4.jpg"); */
+    background-image: url("../HTMLSource/bgcnew.png");
+    background-attachment:fixed;
+    background-repeat: no-repeat;
     min-width:1903px;
     background-size: cover;
 }
