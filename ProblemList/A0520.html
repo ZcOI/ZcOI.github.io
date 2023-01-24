@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AkyOI | By a JS OIer</title><link href="https://www.2weima.com/static/gongshi/mathml.css/mathml.css" rel="stylesheet" ><link rel="stylesheet" href="../CSS/reset.css"><link rel="stylesheet" href="../CSS/head.css"><link rel="shortcut icon" href="https://s1.ax1x.com/2022/12/23/zjSIPS.jpg"><style>.back{z-index: -999;background-color: rgba(255,255,255,0.7);position: fixed;width: 100%; height: 100%;}*{background-repeat: no-repeat;}html,main{height: auto;width: 100%;/* background-color:rgba(255,255,255,0.7); */}
+/* ------------------------------------------------------------------- */
+.prob{background-color: rgba(255, 255, 255,0.7);position: relative;top: 40px;border: 2px solid blueviolet;border-radius: 10px;width: 70%;margin-left: 15%;margin-right: 15%; line-height: 20px;}
+.probhead{font-family: 'Cascadia Code','妤蜂綋', Courier, monospace;color: rgb(135, 0, 212);height: 50px;line-height: 50px;font-size: 40px;}
+.cont{font-family: 'Consolas', Courier, monospace;font-size: 20px;line-height: 25px;}
+.part{margin-bottom: 20px;line-height: 30px;font-size: 28px;font-family: 'Consolas', Courier, monospace;}.prob a{text-decoration: none;line-height: 100%; font-size: 25px;font-family: 'Consolas', Courier, monospace;}
+.ttop a{text-decoration: none;line-height: 100%; font-size: 25px;font-family: 'Consolas', Courier, monospace;}
+.input,.output{font-family: 'Consolas', Courier, monospace;line-height: 25px;/* width: auto; */border: 1px solid black;border-radius: 5px;margin: 5px;background-color: rgba(137, 178, 255,0.5);}
+.ttop{/* box-shadow: 1px 1px; */font-family: 'Courier New', Courier, monospace;font: bold;text-align: center;line-height: 80px;font-size: 30px;height: 80px;width: 80px;border: 2px solid black;border-radius: 50px;position:fixed;right: 40px;bottom: 60px;float: right;background-color: #fff;color: blueviolet;}
+/* ------------------------------------------------------------------- */
+</style><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script></head>
+<body>
+<header>
+<div><ul class="head1"><li><a href="../index.html">~AkyOI~</a></li></ul></div><div><ul class="head1"><li><a href="../ProblemList/">ProblemList</a></li></ul></div><div><ul class="head1"><li><a href="../Softwares/">Softwares</a><ul class="part1"><li><a href="../Softwares/Online/">OnlineJudge</a></li><li><a href="../Softwares/Offline/">OfflineJudge</a></li></ul></li></ul></div><div><ul class="head1"><li><a href="../Downloads/">Downloads</a><ul class="part1"><li><a href="../Downloads/Problems/">Problems</a></li><li><a href="../Downloads/Books/">EBooks</a></li><li><a href="../Downloads/Learning/">Learning</a></li></ul></li></ul></div><div><ul class="head1"><li><a href="../About/">About</a></li></ul></div></header><div class="back"></div><main><div class="prob"><div class="probhead">
+A0520  Test-测试
+</div><br><br><div class="part">[Descriptions]</div><div class="cont">
+<br>为了训练小希的方向感，Gardon 建立了一座大城堡，里面有 N 个房间 (N   10000) 和<br>M 条通道 (M   100000)，每个通道都是单向的，就是说若称某通道连通了 A 房间和 B <br>房间，只说明可以通过这个通道由 A 房间到达 B 房间，但并不说明通过它可以由 B 房间<br>到达 A 房间。<br>Gardon 需要请你写个程序确认一下是否任意两个房间都是相互连通的<br>即：对于任意的 i 和 j ，至少存在一条路径可以从房间 i 到房间 j，也存在一条路径可<br>以从房间 j 到房间 i。<br>
+</div><div class="part"><br>[Input Form]</div><div class="cont"><img src="https://cdn.luogu.com.cn/fe/logo-single.png?0a231b572e3eb12887faedad7d00e829" alt="" height="100px">
+
+<br>输入包含多组数据，输入的第一行有两个数：N 和 M，接下来的 M 行每行有两个数 a 和<br>b，表示了一条通道可以从 A 房间来到 B 房间。文件最后以两个 0 结束。<br>
+</div><div class="part"><br>[Output Form]</div><div class="cont">
+对于输入的每组数据，如果任意两个房间都是相互连接的，输出"Yes"，否则输出" No"。<br>
+</div><div class="part"><br>[Samples]</div><ul>
+<li><div class="cont">Input#1:</div><div class="input"> <br>3 3 <br>1 2 <br>2 3 <br>3 1 <br>3 3 <br>1 2 <br>2 3 <br>3 2 <br>0 0 <br></div><div class="cont">Output#1:</div><div class="output">Yes <br>No <br></div></li>
+
+</ul><div class="part"><br>[Explanations]</div><div class="cont"><div class="part"><br>[Limits]</div><div class="cont">Time: 
+对于 1 号结点而言，只有 2 号到 4 号结点和 4 号到 2 号结点的最短路经过 1 号结<br>点，而 2 号结点和 4 号结点之间的最短路又有 2 条。因而根据定义，1 号结点的重要程<br>度计算为 1/2 + 1/2 = 1。由于图的对称性，其他三个结点的重要程度也都是 1。<br></div><div class="part"><br>[Limits]</div><div class="cont">Time: <img src="https://cdn.luogu.com.cn/upload/usericon/28910.png" alt="" height="100px">
+1s<br>Memory: 26MB
+<br><br>Data-Limits: 
+<br>1<N<1E9  100<M<=1E9<br>对于 50% 的数据， n   10, m   45。<br>对于 100% 的数据， n   100, m   4500，任意一条边的权值 c 是正整数且 1?c?1000。<br>所有数据中保证给出的无向图连通，且任意两个结点之间的最短路径数目不超过 1010<br>请注意，本题要求保留三位小数输出，没有 Special Judge 对你程序的浮点误差进行判<br>断。<br>
+     <br></div><br></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></main><div class="footer">AkyOI ~ 2022 | By Zchared </div
+</body>
+</html><img src="https://cdn.luogu.com.cn/upload/usericon/1.png" alt="" height="100px">
