@@ -1,0 +1,79 @@
+/* 打开侧边栏按钮 */
+.open-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* 关闭侧边栏按钮 */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* 侧边栏容器 */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #d5b8ed;
+    z-index: 9999;
+    transition: right 0.3s ease-in-out;
+  }
+  
+  /* 导航链接样式 */
+  .nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav li {
+    margin-bottom: 10px;
+  }
+  
+  .nav a {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* 遮罩层 */
+  .overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* 侧边栏打开时的样式 */
+  .sidebar.open {
+    right: 0;
+  }
+  
+  .overlay.open {
+    visibility: visible;
+    opacity: 1;
+  }
+  

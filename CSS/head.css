@@ -36,6 +36,7 @@ html{
     src: url(../fonts/Others/仓耳与墨W05.ttf);
 } */
 .footer{
+    z-index: 9998;
     position:relative;
     bottom: 0px;
     color:rgba(240, 255, 255,0.5);
@@ -52,8 +53,8 @@ header{
     z-index: 999;
     position: fixed;
     font-family: 'Cascadia Code';
-    width: 100%;
-    height: 30px;
+    width: 50px;
+    height: 100%;
     background-color: #99d9ea;
 }
 header div{
@@ -62,10 +63,10 @@ header div{
 }
 .head1{
     list-style: none;
-    height: 30px;
-    width:165px;
+    height: 55px;
+    width:100px;
     background-color:#c8bfe7;
-    line-height:30px;
+    line-height:55px;
 }
 .part1 a{
     font-family: 'Cascadia Code'，'Consolas','Courier New';
@@ -79,7 +80,8 @@ header div{
     padding: 0px 5px 0px 5px;
     color: dimgrey;
     display: block;
-    font-size: 18px;
+    font: bold;
+    font-size: 40px;
 }
 .head1 a:hover{
     background-color:#99b9ea;
@@ -87,3 +89,81 @@ header div{
 }
 .head1 a:active{background-color:mediumpurple;color:paleturquoise;}
 .head1:hover .part1 {display: block;}
+/* 打开侧边栏按钮 */
+.open-btn {
+    /* position: fixed; */
+    top: 20px;
+    margin-left: 5px;
+    right: 20px;
+    padding: 5px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+  /* 关闭侧边栏按钮 */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+  /* 侧边栏容器 */
+.sidebar {
+    font-family: 'Cascadia Code'，'Consolas','Courier New';
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #d5b8ed;
+    z-index: 9999;
+    transition: left 0.3s ease-in-out;
+}
+
+  /* 导航链接样式 */
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav li {
+    margin-bottom: 10px;
+}
+.nav a {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Cascadia Code' , 'Curier New';
+}
+  /* 遮罩层 */
+.overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9990;
+    transition: all 0.3s ease-in-out;
+}
+
+  /* 侧边栏打开时的样式 */
+.sidebar.open {
+    left: 0;
+}
+
+.overlay.open {
+    visibility: visible;
+    opacity: 1;
+}

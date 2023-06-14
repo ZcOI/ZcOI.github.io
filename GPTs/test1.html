@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>点击打开侧边栏示例</title>
+  <!-- 引入样式文件 -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 页面主体内容 -->
+  <main>
+    <h1>欢迎来到本站</h1>
+    <p>这里是一个点击打开侧边栏示例。</p>
+    <!-- 打开侧边栏按钮 -->
+    <button class="open-btn">&#9776;</button>
+  </main>
+  <!-- 侧边栏容器 -->
+  <div class="sidebar">
+    <!-- 关闭侧边栏按钮 -->
+    <button class="close-btn">&times;</button>
+    <!-- 导航链接 -->
+    <nav class="nav">
+      <ul>
+        <br><br><br><br>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">产品介绍</a></li>
+        <li><a href="#">案例展示</a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">联系我们</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- 遮罩层 -->
+  <div class="overlay"></div>
+  <!-- 引入 JavaScript 文件实现交互效果 -->
+  <script src="scripts.js"></script>
+</body>
+</html>
