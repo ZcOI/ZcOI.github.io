@@ -1,0 +1,79 @@
+.back{
+    z-index: -999;
+    background-color: rgba(255,255,255,0.7);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+*{
+    background-repeat: no-repeat;
+}
+html,main{
+    height: auto;
+    width: 100%;
+    /* background-color:rgba(255,255,255,0.7); */
+}
+
+/* ------------------------------------------------------------------- */
+.maintext{
+     /* background-color: rgba(255, 255, 255, 0.9); */
+    width: 80%;
+    border: rgba(136, 177, 255, 0.781) 2px solid;
+    border-radius: 10px;
+    height: auto;
+    position: relative;
+    left: 10%;
+    top: 50px;
+}
+.maintext a{
+    font-family: 'Courier New','楷体', Courier, monospace;font-size: 20px;
+}
+.texts{
+    text-indent: 40px;
+    line-height: 25px;
+    font-size: 20px;
+    font-family: 'Consolas','等线', Courier, monospace;
+    width: 90%;
+    border: rgba(159, 100, 237, 0.8) 2px solid;
+    border-radius: 5px;
+    height: auto;
+    position: relative;
+    left: 5%;
+}
+.head01{
+    line-height: 40px;
+    font-size: 40px;
+    font-family: 'Consolas','楷体', Courier, monospace;
+    font: bold;
+    color: darkorchid;
+}
+.head02{
+    font-family: 'Courier New','楷体', Courier, monospace;
+    font:bold;
+    font-size: 40px;
+    line-height: 90px;
+    color: cornflowerblue;
+}
+
+/* ------------------------------------------------------------------- */
+.ttop{
+    font-family: 'Courier New', Courier, monospace;
+    font: bold;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+    border-radius: 50px;
+    position:fixed;
+    right: 40px;
+    bottom: 60px;
+    float: right;
+    color: blueviolet;
+}
+a{
+    text-decoration: none;
+    
+}

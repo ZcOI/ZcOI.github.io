@@ -1,13 +1,17 @@
 html{
     /* background-image: url("https://s1.ax1x.com/2022/11/12/ziZoE4.jpg"); */
-    /* background-image: url("../HTMLSource/backsmall.webp"); */
-    background-image: url("https://s1.ax1x.com/2022/12/23/zjS2DI.png");
+    background-image: url("../HTMLSource/backsmall.webp");
+    /* background-image: url("https://s1.ax1x.com/2022/12/23/zjS2DI.png"); */
     background-attachment:fixed;
     background-repeat: no-repeat;
-    min-width:1903px;
+    min-width:100%;
     background-size: cover;
+    overflow-wrap: break-word;
 }
-@font-face {
+
+
+
+/* @font-face {
     font-family:"Cascadia Code";
     src: url(../fonts/CascadiaCode-2111.01/ttf/CascadiaCode.ttf);
 }
@@ -26,7 +30,10 @@ html{
 @font-face {
     font-family:"Consolas";
     src: url(../fonts/Consolas/consola-1.ttf);
-}
+} */
+
+
+
 /* @font-face {
     font-family:"楷体";
     src: url(../fonts/Others/仓耳与墨W02.ttf);
@@ -122,7 +129,7 @@ header div{
     left: -300px;
     width: 300px;
     height: 100%;
-    background-color: #d5b8ed;
+    background-color: #ccb8ed;
     z-index: 9999;
     transition: left 0.3s ease-in-out;
 }
@@ -143,6 +150,19 @@ header div{
     color: #333;
     text-decoration: none;
     font-family: 'Cascadia Code' , 'Curier New';
+}
+.nav li :hover{
+    background-color: #7700ff34;
+    animation-duration: 0.7s;
+    animation-name: navchange;
+}
+@keyframes navchange {
+    from{
+        background-color: #7700ff00;
+    }
+    to{
+        background-color: #7700ff34;
+    }
 }
   /* 遮罩层 */
 .overlay {
@@ -166,4 +186,7 @@ header div{
 .overlay.open {
     visibility: visible;
     opacity: 1;
+}
+.maintext {
+    background-color: #f3e8ffde;
 }

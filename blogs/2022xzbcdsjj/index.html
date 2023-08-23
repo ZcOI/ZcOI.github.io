@@ -7,86 +7,8 @@
     <title>AkyOI | By a JS OIer</title>
     <link rel="stylesheet" href="../../CSS/reset.css">
     <link rel="stylesheet" href="../../CSS/head.css">
-    <link rel="shortcut icon" href="https://s1.ax1x.com/2022/12/23/zjSIPS.jpg">
-    <style>
-        .back{
-            z-index: -999;
-            background-color: rgba(255,255,255,0.7);
-            position: fixed;
-            width: 100%;
-            height: 100%;
-        }
-
-        *{
-            background-repeat: no-repeat;
-        }
-        html,main{
-            height: auto;
-            width: 100%;
-            /* background-color:rgba(255,255,255,0.7); */
-        }
-
-/* ------------------------------------------------------------------- */
-        .maintext{
-            background-color: rgba(255, 255, 255, 0.9);
-            width: 80%;
-            border: rgba(100, 149, 237,0.8) 2px solid;
-            border-radius: 10px;
-            height: auto;
-            position: relative;
-            left: 10%;
-            top: 50px;
-        }
-        .maintext a{font-family: 'Courier New','楷体', Courier, monospace;font-size: 20px;}
-        .mainptext{
-            line-height: 25px;
-            font-size: 20px;
-            font-family: 'Consolas','等线', Courier, monospace;
-            width: 90%;
-            border: rgba(100, 149, 237,0.8) 2px solid;
-            border-radius: 10px;
-            height: auto;
-            position: relative;
-            left: 5%;
-        }
-        .thead1{
-            line-height: 40px;
-            font-size: 40px;
-            font-family: 'Consolas','楷体', Courier, monospace;
-            font: bold;
-            color: darkorchid;
-        }
-        .problemhead{
-            font-family: 'Courier New','楷体', Courier, monospace;
-            font:bold;
-            font-size: 40px;
-            line-height: 90px;
-            color: cornflowerblue;
-        }
-
-/* ------------------------------------------------------------------- */
-        .ttop{
-            font-family: 'Courier New', Courier, monospace;
-            font: bold;
-            text-align: center;
-            line-height: 80px;
-            font-size: 30px;
-            height: 80px;
-            width: 80px;
-            border: 2px solid black;
-            border-radius: 50px;
-            position:fixed;
-            right: 40px;
-            bottom: 60px;
-            float: right;
-            background-color: #fff;
-            color: blueviolet;
-        }
-        a{
-            text-decoration: none;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="../../CSS/blog.css">
+    <link rel="shortcut icon" href="https://zcoi.github.io/HTMLSource/icon.jpg">
 </head>
 
 <body>
@@ -100,7 +22,7 @@
             <li><a href="https://zcoi.github.io/index.html">&#x2746 ~AkyOI~</a></li>
             <li><a href="https://zcoi.github.io/ProblemList/">&#x270e ProblemList</a></li>
             <!-- <li><a href="./Softwares/">Softwares</a></li> -->
-            <li><a href="https://zcoi.github.io/Downloads/">&#x27b4 Downloads</a></li>
+            <li><a href="https://zcoi.github.io/blogs/">&#x27b4 Blogs</a></li>
             <li><a href="https://zcoi.github.io/About/">&#x2656 About</a></li>
             </ul>
         </nav>
@@ -129,7 +51,7 @@
         </div>
         <div>
             <ul class="head1">
-                <a href="https://zcoi.github.io/Downloads/"> &#x27b4</a>
+                <a href="https://zcoi.github.io/blogs/"> &#x27b4</a>
             </ul>
         </div>
         <div>
@@ -180,24 +102,24 @@
     <main>
         <div class="maintext">
             <br>
-            <div class="thead1">2022年徐州市首届编程大赛题解（By Zchared）</div>
+            <div class="head01">2022年徐州市首届编程大赛题解（By Zchared）</div>
             <br><br>
             <a href="../../Downloads/Problems/Local/XZOI.zip">题目及题解资源下载</a>
             <br><br>
             <iframe src="//player.bilibili.com/player.html?aid=343012968&bvid=BV1794y1R7bL&cid=762066161&page=1&high_quality=1&danmaku=0" width="80%" height="800px" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
             <br><br><br><br>
-            <div class="problemhead">T1 - 数字正方形</div>
+            <div class="head02">T1 - 数字正方形</div>
             <a href="../../ProblemList/A0002.html">Link.</a>
-            <div class="mainptext">
+            <div class="texts">
                 1s/512MB 的限制感觉作为签到题给的太过于大了
                 <br> n ≤ 300
                 <br> 这题模拟就行了，相比较 CSP-S 2020 的 T1 的大模拟，这题简直有点基础的直接秒了。
                 <br>主要就是每次循环，开个变量存上一行最后一个数字。记得这个变量要及时 mod 10
                 <br>时间复杂度 O(n^2)
             </div>
-            <div class="problemhead">T2 - 数字反转</div>
+            <div class="head02">T2 - 数字反转</div>
             <a href="../../ProblemList/A0003.html">Link.</a>
-            <div class="mainptext">
+            <div class="texts">
                 限制 1s/128MB,是非常充裕的了。
                 <br>N（-1000000000 ≤ n ≤ 1000000000）。
                 <br>这题本人直接用字符串做（看 n 的范围,用字符串完全不用担心空间会爆）
@@ -205,17 +127,17 @@
                 <br>舍去 0 的话，开循环进行判断就行了。
                 <br>时间复杂度 O(s.length())
             </div>
-            <div class="problemhead">T3 - 试题解答</div>
+            <div class="head02">T3 - 试题解答</div>
             <a href="../../ProblemList/A0004.html">Link.</a>
-            <div class="mainptext">
+            <div class="texts">
                 1s/128MB 随便浪费吧
                 <br>n ≤ 10000
                 <br>慢慢细心模拟就行了.(由于我没有原题，所以不知道有没有算除法的。反正加上判定没坏处)
                 <br>时间复杂度 O(n)
             </div>
-            <div class="problemhead">T4 - 跳格子</div>
+            <div class="head02">T4 - 跳格子</div>
             <a href="../../ProblemList/A0005.html">Link.</a>
-            <div class="mainptext">
+            <div class="texts">
                 1s/256MB
                 <br>有人可能刚拿来可能拿来就想爆搜 DFS，然后他们就可能时间爆了，50pts--;
                 <br>方法一：记忆化搜索
@@ -233,9 +155,9 @@
                 <br>ans 保守点，开了 unsigned long long
                 <br>时间复杂度 O(n)
             </div>
-            <div class="problemhead">T5 - 阶乘问题</div>
+            <div class="head02">T5 - 阶乘问题</div>
             <a href="../../ProblemList/A0006.html">Link.</a>
-            <div class="mainptext">
+            <div class="texts">
                 (本人感觉其实这题是《编程之美》2.2 的变式，我把原来的题附在题解的PDF中。)
                 <br>(在《算法竞赛进阶指南》P138 也有道题和这道题差不多（叫：阶乘分解）)
                 <br>1s/256MB 感觉暴力还是要优化的
@@ -263,7 +185,7 @@
         
     </main>
     <div class="footer">
-            AkyOI ~ 2022 | By Zchared 
+            AkyOI ~ 2023 | By Zchared 
     </div>
     <script src="https://zcoi.github.io/JavaScripts/mainscripts.js"></script>
 </body>
