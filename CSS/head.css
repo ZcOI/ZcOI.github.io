@@ -10,7 +10,14 @@ html{
 }
 
 
-
+@font-face{
+    font-family: RC;
+    src: url("../fonts/RC.otf");
+}
+@font-face{
+    font-family: Potra-2;
+    src: url("../fonts/Potra-2.ttf");
+}
 /* @font-face {
     font-family:"Cascadia Code";
     src: url(../fonts/CascadiaCode-2111.01/ttf/CascadiaCode.ttf);
@@ -189,4 +196,20 @@ header div{
 }
 .maintext {
     background-color: #f3e8ffde;
+}
+.aky{
+    position: relative;
+    display: inline-block;
+    font-family: RC,'Cascadia Code',courier;
+    font-size: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+}
+.oi{
+    position:relative;
+    display: inline-block;
+    font-family: Potra-2,'Cascadia Code',courier;
+    font-size: 30px;
+    line-height: 30px;
+    border-radius: 5px;
 }
