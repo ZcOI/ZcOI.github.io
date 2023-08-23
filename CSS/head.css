@@ -11,11 +11,11 @@ html{
 
 
 @font-face{
-    font-family: RC;
+    font-family: "RC";
     src: url("../fonts/RC.otf");
 }
 @font-face{
-    font-family: Potra-2;
+    font-family: "Potra-2";
     src: url("../fonts/Potra-2.ttf");
 }
 /* @font-face {
@@ -200,7 +200,7 @@ header div{
 .aky{
     position: relative;
     display: inline-block;
-    font-family: RC,'Cascadia Code',courier;
+    font-family: 'RC','Cascadia Code',courier;
     font-size: 30px;
     line-height: 30px;
     border-radius: 5px;
@@ -208,7 +208,7 @@ header div{
 .oi{
     position:relative;
     display: inline-block;
-    font-family: Potra-2,'Cascadia Code',courier;
+    font-family: 'Potra-2','Cascadia Code',courier;
     font-size: 30px;
     line-height: 30px;
     border-radius: 5px;
