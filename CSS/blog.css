@@ -56,6 +56,14 @@ html,main{
     color: cornflowerblue;
 }
 
+code{
+    margin-left:50px;
+    margin-right: 50px;
+    border:2px solid cornflowerblue;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
 /* ------------------------------------------------------------------- */
 .ttop{
     font-family: 'Courier New', Courier, monospace;
@@ -77,3 +85,27 @@ a{
     text-decoration: none;
     
 }
+
+
+
+
+
+
+
+
+.hljs-ln-numbers {
+/* font-size: 10px; */
+/* margin-right: 100px ; */
+text-align: center;
+color: #ccc;
+border-right: 2px solid #999;
+vertical-align: top;
+padding-right: 10px;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
