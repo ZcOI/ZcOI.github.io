@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=2.0"> -->
+    <meta name="viewport" content="width=100000px, initial-scale=100.0">
     <title>AkyOI | By a JS OIer</title>
 </head>
 <style>
@@ -16,13 +17,80 @@
         z-index: -1;
     }
     .txt{
-        color: aquamarine;
-        font-size: 100px;
+        color: rgba(127, 255, 212, 0.404);
+        font-size: 50px;
+        width: 50%;
     }
 </style>
+
+
+<script>
+    function toggleFullScreen() {
+	if (!document.fullscreenElement && // alternative standard method
+		!document.mozFullScreenElement && !document.webkitFullscreenElement) {// current working methods
+		if (document.documentElement.requestFullscreen) {
+			document.documentElement.requestFullscreen();
+		} else if (document.documentElement.mozRequestFullScreen) {
+			document.documentElement.mozRequestFullScreen();
+		} else if (document.documentElement.webkitRequestFullscreen) {
+			document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+		}
+	} else {
+		if (document.cancelFullScreen) {
+			document.cancelFullScreen();
+		} else if (document.mozCancelFullScreen) {
+			document.mozCancelFullScreen();
+		} else if (document.webkitCancelFullScreen) {
+			document.webkitCancelFullScreen();
+		}
+	}
+}
+    // const html = document.querySelector('html');
+    // const fullScreenBtn = document.getElementById('full-screen-btn');
+    // fullScreenBtn.onclick = () => {
+    //     html.requestFullscreen()
+    //     .then(() => {
+    //         console.log('进入全屏成功');
+    //     })
+    //     .catch(() => {
+    //         console.log('进入全屏失败');
+    //     })
+    // }
+</script>
+
+<!-- <script type="text/javascript">
+    function fullscreen(id) {
+        var element = id?document.getElementById(id):document.body;
+        if(element.requestFullscreen){
+            return element.requestFullscreen();
+        }else if(element.webkitRequestFullScreen){
+            return element.webkitRequestFullScreen();
+        }else if(element.mozRequestFullScreen){
+            return element.mozRequestFullScreen();
+        }else{
+            return element.msRequestFullscreen();
+        }
+    }
+
+    document.getElementById("openfullscreen").addEventListener("click", function (e) {
+        var ifr = document.getElementById("fullscreenIframe");
+        ifr.src = this.href;
+        fullscreen("fullscreenIframe");
+        e.preventDefault();
+    }, false);
+    </script> -->
+    
 <body>
-    <img src="./0.gif" alt="" width="100%" class="im" style="opacity: 0.8;">
-    <div class="txt">你在想什么，我可不是南通!!!(*≧︶≦)(￣▽￣* )ゞ<img src="./1.png" alt="" width="100px" style="opacity: 0.8;"></div>
+    <input value="全屏" type='button' οnclick='toggleFullScreen();'>
+    <!-- <div style="overflow: hidden; width: 0; height: 0;">
+        <iframe src="" width="100%" height="100%" id="fullscreenIframe"></iframe>
+    </div> -->
+    <img src="./0.gif" alt="" width="100%" class="im" style="opacity: 0.85;">
+    <div class="txt">你在想什么😍😘，我可不是南通!!!<br>(*≧︶≦)(￣▽￣* )ゞ<br>I've become so numb <br>我已经变得麻木了<br>
+        I can't feel you there <br>我无法感觉你在那<br>
+        Become so tired, so much more aware <br>变得如此疲倦 对此知道得很清楚<br>
+        I'm becoming this, all I want to do <br>我变成了这副样子 所有想做的<br>
+        Is be more like me and be less like you <br>就是做回我自己而不是像你<img src="./1.png" alt="" width="100px" style="opacity: 1;"></div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -50,5 +118,9 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- <embed height="50" width="500" src="./scream.mp3"> -->
+        <audio src="./scream.mp3" loop="loop"  autoplay="autoplay"></audio>
+<a href="music.html">音乐</a>
+
 </body>
 </html>
