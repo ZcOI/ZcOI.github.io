@@ -2,13 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=2.0"> -->
-    <meta name="viewport" content="width=100000px, initial-scale=100.0">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <!-- <meta name="viewport" content="width=100000px, initial-scale=1.0"> -->
     <title>AkyOI | By a JS OIer</title>
 </head>
 <style>
-    html{
+    .m{
+        /* height: 0px;
+        width: 0px; */
+        /* overflow: hidden; */
+    }
+    .click{
+        color: rgba(127, 255, 212, 0.404);
+        font-size: 50px;
+        width: 50%;
+    }
+    html {
         background-image: url("./0.gif");
+        
     }
     .im{
         position: absolute;
@@ -23,8 +34,23 @@
     }
 </style>
 
+<script type="text/javascript">
+    window.onload = function(){
+            setInterval("toggleSound()",100);
+        }
+
+    function toggleSound() {
+                var music = document.getElementById("au");//获取ID  
+                    
+                if (music.paused) { //判读是否播放  
+                    music.paused=false;
+                    music.play(); //没有就播放 
+                }    
+        }
+</script>
 
 <script>
+    
     function toggleFullScreen() {
 	if (!document.fullscreenElement && // alternative standard method
 		!document.mozFullScreenElement && !document.webkitFullscreenElement) {// current working methods
@@ -80,8 +106,10 @@
     }, false);
     </script> -->
     
-<body>
-    <input value="全屏" type='button' οnclick='toggleFullScreen();'>
+<body><a href="javascript:;">Click Here!!!</a>
+    <div class="m">
+        <audio src="./scream.mp3" loop="loop"  autoplay="autoplay" id="au"></audio>
+    
     <!-- <div style="overflow: hidden; width: 0; height: 0;">
         <iframe src="" width="100%" height="100%" id="fullscreenIframe"></iframe>
     </div> -->
@@ -119,8 +147,9 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- <embed height="50" width="500" src="./scream.mp3"> -->
-        <audio src="./scream.mp3" loop="loop"  autoplay="autoplay"></audio>
+        
 <a href="music.html">音乐</a>
+    </div>
 
 </body>
 </html>
