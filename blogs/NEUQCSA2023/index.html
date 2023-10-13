@@ -281,7 +281,7 @@ p.interactive()
                 打开IDA后发现有两次read，而且都可以进行栈溢出，且空间足够。由于开启了canary，所以必须先得到canary然后进行栈溢出。<br>
                 因此，第一次read用来泄露canary，第二次用来ret到backdoor <br>
                 众所周知，buf在第二个printf输出的时候，遇到\x00才会停止输出。因此我们可以输入足够长的垃圾数据，让他直接占到紧接着canary的位置（0x30-8个a），<br>
-                这样就不会在canary之前又\x00，这样就可以在输出buf的时候连着canary一起输出。<br>
+                这样就不会在canary之前有\x00，这样就可以在输出buf的时候连着canary一起输出。<br>
                 获得了canary之后就像普通的栈溢出做就行了
             
             <pre><code>from pwn import*
