@@ -1,11 +1,11 @@
-markdown出问题的话直接看链接：https://zcoi.github.io/blogs/CTF/monthgame2310/
+markdown出问题的话直接看链接：https://akyoi.akyuu.space/blogs/CTF/monthgame2310/
 # 解题情况
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/self1.png)
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/self2.png)
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/misc.png)
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/web.png)
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/pwn.png)
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/cry.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/self1.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/self2.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/misc.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/web.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/pwn.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/cry.png)
 
 
 # 解题思路
@@ -71,10 +71,10 @@ p.interactive()
 字面意思，栈可以到处跑
 正常审题程序不再罗列（checksec、IDA看字符串啥的）。
 IDA中发现有沙箱
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/1dis1.png)
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/1seccomp.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/1dis1.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/1seccomp.png)
 依旧是发现栈溢出。
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/1dis2.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/1dis2.png)
 考虑到没法直接执行shellcode，因此只能构建ROP链。实现以下功能：
 ```
 char*file='flag';
@@ -155,10 +155,10 @@ p.interactive()
 ### call me sys
 syscall，但是只能用几个函数
 又是沙箱：
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/2dis1.png)
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/2seccomp.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/2dis1.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/2seccomp.png)
 还是栈溢出漏洞：
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/2dis2.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/2dis2.png)
 由于没有关掉open,write,read函数，所以这题思路和上题一样。（题目说有三种方法，日后钻研）
 ```
 from pwn import*
@@ -232,16 +232,16 @@ p.interactive(0)
 Q:你leak不了一点！hacker！！
 A:？？？？？？
 依旧是栈溢出，这次没有沙箱了。但是把标准输出关闭了。这意味着我们需要把标准输出重定向才能获得flag
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/3dis1.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/3dis1.png)
 既然我们在get shell之前没办法获得任何输出，那么我们必须采用一种不依赖于泄露东西的方法。
 于是毋庸置疑，关于泄露libc地址的方法直接一票否决了。
 于是考虑使用ret2dlresolve来调用shell。
 这里使用生成的payload
 原本是想用system("/bin/sh")的，但是发现system好像有些神秘问题导致显示：
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/3problem.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/3problem.png)
 于是采用execve("/bin/sh",0,0)来获取shell
 但是由于没有直接pop rdx的gadget，我们使用csu来进行rdx的修改。（注意这里面的call和判断,标记起来了）：
-![](https://zcoi.github.io/blogs/CTF/monthgame2310/3csu.png)
+![](https://akyoi.akyuu.space/blogs/CTF/monthgame2310/3csu.png)
 所以我们先把想要的rdx的值pop到r14里面，然后返回到0x4012300那里，把r14赋给rdx。这里绕过判断就是让rbx和rbp值相等。这里多调试几下就OK了
 之后就get到shell了。这时候我们要把标准输出重定向到标准错误里面，即exec 1>&2
 hint:网上关于标准输出被关闭的情况，有教程：exec 1>&0。但是似乎ubuntu 20不太好使。 可以选择把输出重定向给标准错误（2）
